@@ -1,0 +1,57 @@
+.audio {
+  position: absolute;
+  top: 119px;
+  right: 0;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.audio__container {
+
+
+}
+
+.audio__image {
+  position: relative;
+  width: 100%;
+}
+
+.audio__image img {
+  width: 100%;
+}
+
+.audio__player {
+  position: absolute;
+  z-index: 2;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.audio__player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.audio__player.active {
+  display: block;
+}
+
+.audio__button svg {
+  position: absolute;
+  top: 71%;
+  left: 50%;
+  width: 47px;
+  height: 47px;
+  display: block;
+  z-index: 2;
+  
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  fill: $color-default-white;
+  color: $color-default-white;
+}

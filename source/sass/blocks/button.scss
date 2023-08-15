@@ -11,29 +11,30 @@
   line-height: 16px;
   text-align: center;
 
-  border: none;
+  border: 1px solid $color-transparent;
   cursor: pointer;
 
   transition: opacity $trans-default;
   user-select: none;
 
-  &:disabled {
-    opacity: 0.1;
-
-    pointer-events: none;
-  }
-
-  @include hover-focus {
+  &:hover,
+  &:focus {
     background-color: $color-transparent;
     color: $color-resolution-blue;
 
     border: 1px solid $color-resolution-blue;
   }
 
-  @include active {
+  &:active {
     background-color: $color-resolution-blue;
     color: $color-default-white;
 
     border: none;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+
+    pointer-events: none;
   }
 }

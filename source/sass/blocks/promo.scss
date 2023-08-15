@@ -1,12 +1,36 @@
 .promo {
+  position: relative;
+
   color: $color-default-white;
+  background-color: $color-navy-blue;
+}
+
+.promo__container-content {
+  height: 800px;
+}
+
+.promo__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
 }
 
 .promo__content {
+  position: relative;
   display: flex;
+
+  margin: 182px 120px 80px;
 
   @include vp-1199 {
     flex-direction: column;
+    margin: 174px 45px 90px;
+  }
+
+  @include vp-767 {
+    margin: 140px 15px 152px;
   }
 }
 
@@ -26,7 +50,15 @@
     margin: 0 0 25px;
 
     @include vp-1199 {
+      font-size: 56px;
+      line-height: 56px;
+
       margin-bottom: 15px;
+    }
+
+    @include vp-767 {
+      font-size: 30px;
+      line-height: 30px;
     }
   }
 
@@ -36,30 +68,98 @@
     line-height: 24px;
 
     margin: 0 0 35px;
+    max-width: 464px;
 
     @include vp-1199 {
       margin-bottom: 25px;
     }
 
     @include vp-767 {
+      font-size: 15px;
+      line-height: 20px;
+
+      max-width: 290px;
       margin-bottom: 20px;
     }
   }
 }
 
-.promo__button-container {
+.promo__button {
+  width: 220px;
+
+  @include vp-1199 {
+    width: 206px;
+  }
+
+  @include vp-767 {
+    width: 180px;
+  }
+}
+
+.promo__text-container {
   display: flex;
   flex-direction: row;
   gap: 10px;
 
-  margin-top: auto;
+  margin-top: 150px;
+
+  @include vp-1199 {
+    display: none;
+  }
 }
 
-.promo__button-transparent {
+.promo__text-small {
+  position: relative;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 
+  padding: 14px 20px 14px 40px;
   border: 1px solid $color-default-white;
   background-color: $color-transparent;
+
+  &--one::before {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-image: url("/img/svg/promo-moon.svg");
+    content: "";
+    width: 12px;
+    height: 12px;
+  }
+
+  &--two::before {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-image: url("/img/svg/promo-level.svg");
+    content: "";
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.promo__photo-container {
+  position: absolute;
+  top: 31px;
+  left: 65%;
+  z-index: -1;
+
+  display: flex;
+  width: 100%;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.promo__photo-one {
+  width: 100%;
+}
+
+.promo__photo-two {
+  width: 100%;
+
+  margin-left: -913px;
+  margin-top: 80px;
 }

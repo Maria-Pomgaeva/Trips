@@ -27,10 +27,11 @@
             </svg>
           </a>
           <nav class="header__nav header__nav--closed header__nav--nojs">
-            <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
-              <svg width="26" height="26">
-                <use xlink:href="img/sprite.svg#menu"></use>
-              </svg>
+            <button class="header__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+              <span class="header__toggle-bar"></span>
+              <span class="header__toggle-bar"></span>
+              <span class="header__toggle-bar"></span>
             </button>
             <ul class="header__list">
               <li class="header__list-item"><a class="header__list-link" href="#tours">Туры</a></li>
@@ -46,124 +47,144 @@
       </header>
       <main>
         <section class="promo">
-          <div class="promo__container container swiper">
-            <div class="promo__wrapper swiper-wrapper">
-              <div class="promo__slide swiper-slide">
-                <div class="promo__image">
-                  <picture>
-                    <source media="(max-width: 767px)" type="image/webp" srcset="img/image/promo/promo-mobile-1.webp 1x, img/image/promo/promo-mobile-1@2x.webp 2x">
-                    <source media="(max-width: 767px)" srcset="img/image/promo/promo-mobile-1.jpg 1x, img/image/promo/promo-mobile-1@2x.jpg 2x">
-                    <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-tablet-1.webp 1x, img/image/promo/promo-tablet-1@2x.webp 2x">
-                    <source media="(max-width: 1199px)" srcset="img/image/promo/promo-tablet-1.jpg 1x, img/image/promo/promo-tablet-1@2x.jpg 2x">
-                    <source type="image/webp" srcset="img/image/promo/promo-desktop-1.webp 1x, img/image/promo/promo-desktop-1@2x.webp 2x">
-                    <img src="img/image/promo/promo-desktop-1.jpg" srcset="img/image/promo/promo-desktop-1@2x.jpg" width="1440" height="800" alt="Вершины Кавказа">
-                  </picture>
-                </div>
-                <div class="promo__content">
-                  <div class="promo__text">
-                    <h1>Захватывающие вершины Кавказа</h1>
-                    <p>В&nbsp;сопровождении опытных гидов вы&nbsp;пройдете через потрясающие ландшафты и&nbsp;совершите восход на&nbsp;вершину горы Чегет.</p>
-                    <a href="#" class="promo__button button">Смотреть тур</a>
-                    <div class="promo__text-container">
-                      <button class="promo__button-transparent promo__button-transparent--one" type="button">
-                        <svg width="12" height="12">
-                          <use xlink:href="img/sprite.svg#button-moon"></use>
-                        </svg>
-                        6 дней/5 ночей</button>
-                      <button class="promo__button-transparent promo__button-transparent--two" type="button">
-                        <svg width="12" height="12">
-                          <use xlink:href="img/sprite.svg#button-level"></use>
-                        </svg>
-                        Высокая сложность</button>
-                    </div>
-                  </div>
-                  <div class="video__container">
-                    <div class="video__image">
-                      <picture>
-                        <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-video-tablet.webp 1x, img/image/promo/promo-video-tablet@2x.webp 2x">
-                        <source media="(max-width: 1199px)" srcset="img/image/promo/promo-video-tablet.jpg 1x, img/image/promo/promo-video-tablet@2x.jpg 2x">
-                        <source type="image/webp" srcset="img/image/promo/promo-video-desktop.webp 1x, img/image/promo/promo-video-desktop@2x.webp 2x">
-                        <img src="img/image/promo/promo-video-desktop.jpg" srcset="img/image/promo/promo-video-desktop@2x.jpg" width="482" height="317" alt="Видео-тур по Кавказу">
-                      </picture>
-                      <a href="#" class="video__button" id="link">
-                        <svg width="56" height="56">
-                          <use xlink:href="img/sprite.svg#promo-button-video"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="video__player" id="player" data-src="#"></div>
+          <div class="promo__container promo__swiper swiper">
+            <div class="promo__container-image swiper-container">
+              <div class="promo__wrapper-image swiper-wrapper">
+                <div class="promo__slide-image swiper-slide">
+                  <div class="promo__image">
+                    <picture>
+                      <source media="(max-width: 767px)" type="image/webp" srcset="img/image/promo/promo-mobile-1.webp 1x, img/image/promo/promo-mobile-1@2x.webp 2x">
+                      <source media="(max-width: 767px)" srcset="img/image/promo/promo-mobile-1.jpg 1x, img/image/promo/promo-mobile-1@2x.jpg 2x">
+                      <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-tablet-1.webp 1x, img/image/promo/promo-tablet-1@2x.webp 2x">
+                      <source media="(max-width: 1199px)" srcset="img/image/promo/promo-tablet-1.jpg 1x, img/image/promo/promo-tablet-1@2x.jpg 2x">
+                      <source type="image/webp" srcset="img/image/promo/promo-desktop-1.webp 1x, img/image/promo/promo-desktop-1@2x.webp 2x">
+                      <img src="img/image/promo/promo-desktop-1.jpg" srcset="img/image/promo/promo-desktop-1@2x.jpg" width="1440" height="800" alt="Вершины Кавказа">
+                    </picture>
                   </div>
                 </div>
-              </div>
-              <div class="promo__slide swiper-slide">
-                <div class="promo__image">
-                  <picture>
-                    <source media="(max-width: 767px)" type="image/webp" srcset="img/image/promo/promo-mobile-3.webp 1x, img/image/promo/promo-mobile-3@2x.webp 2x">
-                    <source media="(max-width: 767px)" srcset="img/image/promo/promo-mobile-3.jpg 1x, img/image/promo/promo-mobile-3@2x.jpg 2x">
-                    <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-tablet-3.webp 1x, img/image/promo/promo-tablet-3@2x.webp 2x">
-                    <source media="(max-width: 1199px)" srcset="img/image/promo/promo-tablet-3.jpg 1x, img/image/promo/promo-tablet-3@2x.jpg 2x">
-                    <source type="image/webp" srcset="img/image/promo/promo-desktop-3.webp 1x, img/image/promo/promo-desktop-3@2x.webp 2x">
-                    <img src="img/image/promo/promo-desktop-3.jpg" srcset="img/image/promo/promo-desktop-3@2x.jpg" width="1440" height="800" alt="Природа Камчатки">
-                  </picture>
-                </div>
-                <div class="promo__content">
-                  <div class="promo__text">
-                    <h1>Невероятная природа Камчатки</h1>
-                    <p>Незабываемое приключение, во&nbsp;время которого вы&nbsp;отправитесь в&nbsp;путешествие по&nbsp;одному из&nbsp;самых нетронутых уголков дикой природы в&nbsp;мире.</p>
-                    <a href="#" class="promo__button button">Смотреть тур</a>
-                    <div class="promo__button-container">
-                      <button class="promo__button-transparent" type="button">9 дней/10 ночей</button>
-                      <button class="promo__button-transparent" type="button">Средняя сложность</button>
-                    </div>
-                  </div>
-                  <div class="promo__photo-container">
-                    <div class="promo__photo-one">
-                      <picture>
-                        <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-photo-one-tablet.webp 1x, img/image/promo/promo-photo-one-tablet@2x.webp 2x">
-                        <source media="(max-width: 1199px)" srcset="img/image/promo/promo-photo-one-tablet.jpg 1x, img/image/promo/promo-photo-one-tablet@2x.jpg 2x">
-                        <source type="image/webp" srcset="img/image/promo/promo-photo-one-desktop.webp 1x, img/image/promo/promo-photo-one-desktop@2x.webp 2x">
-                        <img src="img/image/promo/promo-photo-one-desktop.jpg" srcset="img/image/promo/promo-photo-one-desktop@2x.jpg" width="308" height="407" alt="Фото Камчатки">
-                      </picture>
-                    </div>
-                    <div class="promo__photo-two">
-                      <picture>
-                        <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-photo-two-tablet.webp 1x, img/image/promo/promo-photo-two-tablet@2x.webp 2x">
-                        <source media="(max-width: 1199px)" srcset="img/image/promo/promo-photo-two-tablet.jpg 1x, img/image/promo/promo-photo-two-tablet@2x.jpg 2x">
-                        <source type="image/webp" srcset="img/image/promo/promo-photo-two-desktop.webp 1x, img/image/promo/promo-photo-two-desktop@2x.webp 2x">
-                        <img src="img/image/promo/promo-photo-two-desktop.jpg" srcset="img/image/promo/promo-photo-two-desktop@2x.jpg" width="277" height="366" alt="Фото Камчатки">
-                      </picture>
-                    </div>
+                <div class="promo__slide-image swiper-slide">
+                  <div class="promo__image">
+                    <picture>
+                      <source media="(max-width: 767px)" type="image/webp" srcset="img/image/promo/promo-mobile-3.webp 1x, img/image/promo/promo-mobile-3@2x.webp 2x">
+                      <source media="(max-width: 767px)" srcset="img/image/promo/promo-mobile-3.jpg 1x, img/image/promo/promo-mobile-3@2x.jpg 2x">
+                      <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-tablet-3.webp 1x, img/image/promo/promo-tablet-3@2x.webp 2x">
+                      <source media="(max-width: 1199px)" srcset="img/image/promo/promo-tablet-3.jpg 1x, img/image/promo/promo-tablet-3@2x.jpg 2x">
+                      <source type="image/webp" srcset="img/image/promo/promo-desktop-3.webp 1x, img/image/promo/promo-desktop-3@2x.webp 2x">
+                      <img src="img/image/promo/promo-desktop-3.jpg" srcset="img/image/promo/promo-desktop-3@2x.jpg" width="1440" height="800" alt="Природа Камчатки">
+                    </picture>
                   </div>
                 </div>
-              </div>
-              <div class="promo__slide swiper-slide">
-                <div class="promo__image">
-                  <picture>
-                    <source media="(max-width: 767px)" type="image/webp" srcset="img/image/promo/promo-mobile-2.webp 1x, img/image/promo/promo-mobile-2@2x.webp 2x">
-                    <source media="(max-width: 767px)" srcset="img/image/promo/promo-mobile-2.jpg 1x, img/image/promo/promo-mobile-2@2x.jpg 2x">
-                    <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-tablet-2.webp 1x, img/image/promo/promo-tablet-2@2x.webp 2x">
-                    <source media="(max-width: 1199px)" srcset="img/image/promo/promo-tablet-2.jpg 1x, img/image/promo/promo-tablet-2@2x.jpg 2x">
-                    <source type="image/webp" srcset="img/image/promo/promo-desktop-2.webp 1x, img/image/promo/promo-desktop-2@2x.webp 2x">
-                    <img src="img/image/promo/promo-desktop-2.jpg" srcset="img/image/promo/promo-desktop-2@2x.jpg" width="1440" height="800" alt="Пейзажи Алтая">
-                  </picture>
-                </div>
-                <div class="promo__content">
-                  <div class="promo__text">
-                    <h1>Магические пейзажи Алтайского Края</h1>
-                    <p>Алтайский трекинг-тур&nbsp;&mdash; это захватывающее приключение с&nbsp;посещением магических и&nbsp;захватывающих дух ландшафтов Алтайских гор.</p>
-                    <a href="#" class="promo__button button">Смотреть тур</a>
-                    <div class="promo__button-container">
-                      <button class="promo__button-transparent" type="button">8 дней/7 ночей</button>
-                      <button class="promo__button-transparent" type="button">Легкая сложность</button>
-                    </div>
-                  </div>
-                  <div class="audio-container">
-                    <audio></audio>
+                <div class="promo__slide-image swiper-slide">
+                  <div class="promo__image">
+                    <picture>
+                        <source media="(max-width: 767px)" type="image/webp" srcset="img/image/promo/promo-mobile-2.webp 1x, img/image/promo/promo-mobile-2@2x.webp 2x">
+                      <source media="(max-width: 767px)" srcset="img/image/promo/promo-mobile-2.jpg 1x, img/image/promo/promo-mobile-2@2x.jpg 2x">
+                      <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-tablet-2.webp 1x, img/image/promo/promo-tablet-2@2x.webp 2x">
+                      <source media="(max-width: 1199px)" srcset="img/image/promo/promo-tablet-2.jpg 1x, img/image/promo/promo-tablet-2@2x.jpg 2x">
+                      <source type="image/webp" srcset="img/image/promo/promo-desktop-2.webp 1x, img/image/promo/promo-desktop-2@2x.webp 2x">
+                      <img src="img/image/promo/promo-desktop-2.jpg" srcset="img/image/promo/promo-desktop-2@2x.jpg" width="1440" height="800" alt="Пейзажи Алтая">
+                    </picture>
                   </div>
                 </div>
               </div>
             </div>
-            <button></button>
+            <div class="promo__container-content swiper-container">
+              <div class="promo__wrapper-conten swiper-wrapper">
+                <div class="promo__slide-conten swiper-slide">
+                  <div class="promo__content">
+                    <div class="promo__text">
+                      <h1>Захватывающие<br>вершины Кавказа</h1>
+                      <p>В&nbsp;сопровождении опытных гидов вы&nbsp;пройдете через потрясающие ландшафты и&nbsp;совершите восход на&nbsp;вершину горы Чегет.</p>
+                      <a href="#" class="promo__button button">Смотреть тур</a>
+                      <div class="promo__text-container">
+                        <p class="promo__text-small promo__text-small--one">6 дней/5 ночей</p>
+                        <p class="promo__text-small promo__text-small--two">Высокая сложность</p>
+                      </div>
+                    </div>
+                    <div class="video">
+                      <div class="video__container">
+                      <div class="video__image">
+                        <picture>
+                          <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-video-tablet.webp 1x, img/image/promo/promo-video-tablet@2x.webp 2x">
+                          <source media="(max-width: 1199px)" srcset="img/image/promo/promo-video-tablet.jpg 1x, img/image/promo/promo-video-tablet@2x.jpg 2x">
+                          <source type="image/webp" srcset="img/image/promo/promo-video-desktop.webp 1x, img/image/promo/promo-video-desktop@2x.webp 2x">
+                          <img src="img/image/promo/promo-video-desktop.jpg" srcset="img/image/promo/promo-video-desktop@2x.jpg" width="482" height="317" alt="Видео-тур по Кавказу">
+                        </picture>
+                        <a href="#" class="video__button" id="link">
+                          <svg width="56" height="56">
+                            <use xlink:href="img/sprite.svg#promo-button-video"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="video__player" id="player" data-src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="promo__slide-conten swiper-slide">
+                  <div class="promo__content">
+                    <div class="promo__text">
+                      <h1>Невероятная<br>природа Камчатки</h1>
+                      <p>Незабываемое приключение, во&nbsp;время которого вы&nbsp;отправитесь в&nbsp;путешествие по&nbsp;одному из&nbsp;самых нетронутых уголков дикой природы в&nbsp;мире.</p>
+                      <a href="#" class="promo__button button">Смотреть тур</a>
+                      <div class="promo__text-container">
+                        <p class="promo__text-small promo__text-small--one">9 дней/10 ночей</p>
+                        <p class="promo__text-small promo__text-small--two">Средняя сложность</p>
+                      </div>
+                    </div>
+                    <div class="promo__photo-container">
+                      <div class="promo__photo-one">
+                        <picture>
+                          <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-photo-one-tablet.webp 1x, img/image/promo/promo-photo-one-tablet@2x.webp 2x">
+                          <source media="(max-width: 1199px)" srcset="img/image/promo/promo-photo-one-tablet.jpg 1x, img/image/promo/promo-photo-one-tablet@2x.jpg 2x">
+                          <source type="image/webp" srcset="img/image/promo/promo-photo-one-desktop.webp 1x, img/image/promo/promo-photo-one-desktop@2x.webp 2x">
+                          <img src="img/image/promo/promo-photo-one-desktop.jpg" srcset="img/image/promo/promo-photo-one-desktop@2x.jpg" width="308" height="407" alt="Фото Камчатки">
+                        </picture>
+                      </div>
+                      <div class="promo__photo-two">
+                        <picture>
+                          <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-photo-two-tablet.webp 1x, img/image/promo/promo-photo-two-tablet@2x.webp 2x">
+                          <source media="(max-width: 1199px)" srcset="img/image/promo/promo-photo-two-tablet.jpg 1x, img/image/promo/promo-photo-two-tablet@2x.jpg 2x">
+                          <source type="image/webp" srcset="img/image/promo/promo-photo-two-desktop.webp 1x, img/image/promo/promo-photo-two-desktop@2x.webp 2x">
+                          <img src="img/image/promo/promo-photo-two-desktop.jpg" srcset="img/image/promo/promo-photo-two-desktop@2x.jpg" width="277" height="366" alt="Фото Камчатки">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="promo__slide-conten swiper-slide">
+                  <div class="promo__content">
+                    <div class="promo__text">
+                      <h1>Магические пейзажи Алтайского Края</h1>
+                      <p>Алтайский трекинг-тур&nbsp;&mdash; это захватывающее приключение с&nbsp;посещением магических и&nbsp;захватывающих дух ландшафтов Алтайских гор.</p>
+                      <a href="#" class="promo__button button">Смотреть тур</a>
+                      <div class="promo__text-container">
+                        <p class="promo__text-small promo__text-small--one">8 дней/7 ночей</p>
+                        <p class="promo__text-small promo__text-small--two">Легкая сложность</p>
+                      </div>
+                    </div>
+                    <div class="audio">
+                      <div class="audio__container">
+                        <div class="audio__image">
+                          <picture>
+                            <source type="image/webp" srcset="img/image/promo/promo-audio-player.webp 1x, img/image/promo/promo-audio-player@2x.webp 2x">
+                            <img src="img/image/promo/promo-audio-player.png" srcset="img/image/promo/promo-audio-player.png" width="340" height="220" alt="Подкаст про Алтай">
+                          </picture>
+                          <a href="#" class="audio__button">
+                            <svg width="47" height="47">
+                              <use xlink:href="img/sprite.svg#promo-button-audio"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="audio__play" data-src="https://music.yandex.ru/iframe/#album/25474374"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="promo__pagination swiper-pagination"></div>
+            </div>
+
           </div>
         </section>
         <section class="tours" id="tours"></section>
