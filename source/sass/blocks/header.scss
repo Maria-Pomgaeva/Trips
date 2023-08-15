@@ -3,14 +3,43 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 2;
 
   padding-top: 40px;
 }
 
 .header__container {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  @include vp-1199 {
+    justify-content: flex-end;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.header__logo {
+  z-index: 4;
+
+  @include vp-1199 {
+    margin-right: 20%;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+
+  &:focus {
+    border: 1px solid;
+    outline: none;
+  }
 }
 
 .header__logo svg {
@@ -33,11 +62,25 @@
   font-weight: 600;
   line-height: 18px;
 
-  @include hover-focus {
-    color: $color-resolution-blue;
+  z-index: 4;
+
+  @include vp-1199 {
+    font-size: 16px;
+    line-height: 16px;
   }
 
-  @include active {
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-resolution-blue;
+    outline: none;
+  }
+
+  &:active {
     color: $color-navy-blue;
   }
 
@@ -46,52 +89,109 @@
   }
 }
 
+.header__toggle {
+  position: absolute;
+  top: 0;
+  left: 45px;
+  padding: 0;
+
+  display: block;
+  width: 26px;
+  height: 26px;
+
+  border: none;
+  background-color: $color-transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  @include vp-767 {
+    left: 15px;
+  }
+}
+
+// Бургер
+
+.header__toggle .header__toggle-bar {
+  transition: all 0.3s ease-out;
+
+  height: 2px;
+  width: 26px;
+  display: block;
+  background-color: $color-elephant;
+}
+
+.header__nav--closed {
+  transition-delay: 0.3s;
+}
+
+.header__nav--closed .header__toggle-bar:nth-of-type(2n) {
+  width: 26px;
+  margin-bottom: 8px;
+
+  transition-property: margin, height, width;
+  transition-delay: 0.3s, 0.3s, 0s;
+}
+
+.header__nav--closed .header__toggle-bar:nth-of-type(3n) {
+  width: 17px;
+  margin-bottom: 8px;
+}
+
 // Крестик
 
-.header__nav--opened .header__toggle {
-  top: 0;
-  left: 0;
+.header__nav--opened .header__toggle-bar {
+  transform: rotate(45deg);
+  transition-delay: 0.3s;
+  height: 2px;
+}
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 2px;
+.header__nav--opened .header__toggle-bar:nth-of-type(2) {
+  opacity: 0;
+  height: 0;
+  margin: -4px 0;
+}
 
-    background-color: $color-elephant;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
+.header__nav--opened .header__toggle-bar:nth-of-type(3) {
+  transform: rotate(-45deg);
+  transition-delay: 0.3s;
+  height: 2px;
 }
 
 // Закрытое открытое меню
 
+.header__toggle {
+  display: none;
+}
+
 @include vp-1199 {
+  .header__toggle {
+    display: block;
+    z-index: 4;
+  }
+
   .header__nav--closed .header__list {
     display: none;
   }
 
   .header__nav--opened .header__list {
     position: absolute;
-    top: 0;
+    top: -40px;
     right: 0;
     left: 0;
-    z-index: 20;
+    z-index: 3;
+    padding: 125px 0 70px;
 
     background-color: $color-default-white;
   }
 
   .header__nav--opened .header__list-item,
   .header__nav--nojs .header__list-item {
-    text-align: center;
     width: 100vw;
+    padding: 0 0 0 45px;
+
+    @include vp-767 {
+      padding-left: 15px;
+    }
   }
 
   .header__nav--nojs .header__toggle {
@@ -111,18 +211,13 @@
   }
 }
 
-.header__nav--closed .header__list {
-  @media (min-width: vp-1199) {
-    display: flex;
-  }
-}
-
 .header__list {
   list-style: none;
+  display: flex;
 
   padding: 0;
   margin: 0;
-  gap: 31px;
+  gap: 20px;
 
   @include vp-1199 {
     flex-direction: column;
@@ -135,6 +230,10 @@
   font-weight: 400;
   line-height: 16px;
 
+  padding: 3px 5px;
+  border-bottom: 1px solid $color-transparent;
+
+
   @include vp-1199 {
     font-size: 16px;
     font-weight: 700;
@@ -143,5 +242,17 @@
     text-transform: uppercase;
 
     color: $color-elephant;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $color-elephant;
+  }
+}
+
+.header__list-item a {
+  &:focus {
+    padding: 3px 5px;
+    outline: 1px solid $color-elephant;
+    border: none;
   }
 }

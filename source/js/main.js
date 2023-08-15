@@ -3,6 +3,7 @@ import {initPhoneMask} from './utils/phone-mask/phone-mask';
 import {Form} from './modules/form-validate/form';
 import {menuOpen} from './modules/menu-open';
 import {videoLoad} from './modules/video';
+import {initSwiper} from './modules/swiper';
 
 // ---------------------------------
 
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initPhoneMask();
     menuOpen();
     videoLoad();
+    initSwiper();
     const form = new Form();
     window.form = form;
     form.init();

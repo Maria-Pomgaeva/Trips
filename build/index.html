@@ -27,10 +27,11 @@
             </svg>
           </a>
           <nav class="header__nav header__nav--closed header__nav--nojs">
-            <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
-              <svg width="26" height="26">
-                <use xlink:href="img/sprite.svg#menu"></use>
-              </svg>
+            <button class="header__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+              <span class="header__toggle-bar"></span>
+              <span class="header__toggle-bar"></span>
+              <span class="header__toggle-bar"></span>
             </button>
             <ul class="header__list">
               <li class="header__list-item"><a class="header__list-link" href="#tours">Туры</a></li>
@@ -46,7 +47,7 @@
       </header>
       <main>
         <section class="promo">
-          <div class="promo__container container swiper">
+          <div class="promo__container promo__swiper swiper">
             <div class="promo__wrapper swiper-wrapper">
               <div class="promo__slide swiper-slide">
                 <div class="promo__image">
@@ -163,7 +164,7 @@
                 </div>
               </div>
             </div>
-            <button></button>
+            <div class="promo__pagination swiper-pagination"></div>
           </div>
         </section>
         <section class="tours" id="tours"></section>
