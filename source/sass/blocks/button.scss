@@ -1,0 +1,39 @@
+.button {
+  display: block;
+  padding: 21px;
+
+  color: $color-default-white;
+  background-color: $color-navy-blue;
+
+  font-family: $ff-montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+
+  border: none;
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+  user-select: none;
+
+  &:disabled {
+    opacity: 0.1;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    background-color: $color-transparent;
+    color: $color-resolution-blue;
+
+    border: 1px solid $color-resolution-blue;
+  }
+
+  @include active {
+    background-color: $color-resolution-blue;
+    color: $color-default-white;
+
+    border: none;
+  }
+}
