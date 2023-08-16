@@ -8,11 +8,6 @@
   }
 }
 
-.audio__container {
-
-
-}
-
 .audio__image {
   position: relative;
   width: 100%;
@@ -49,7 +44,7 @@
   height: 47px;
   display: block;
   z-index: 2;
-  
+
   cursor: pointer;
   transform: translate(-50%, -50%);
   fill: $color-default-white;
