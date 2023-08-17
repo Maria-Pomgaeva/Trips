@@ -262,13 +262,13 @@
   right: 120px;
 
   @media (max-width: 1199px) {
-    bottom: 90px;
+    bottom: 84px;
     right: 0;
     width: 100%;
   }
 
   @media (max-width: 767px) {
-    bottom: 40px;
+    bottom: 32px;
   }
 }
 /* Bullets */
@@ -352,7 +352,7 @@ button.swiper-pagination-bullet {
   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 7.5px);
 
   @media (max-width: 767px) {
-    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 5px);
   }
 }
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
