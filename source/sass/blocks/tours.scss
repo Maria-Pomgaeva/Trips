@@ -1,0 +1,131 @@
+.tours {
+  position: relative;
+  padding: 100px 0;
+
+  & h2 {
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 35px;
+
+    text-shadow: 24px 0px 0px rgba(45, 56, 63, 0.28);
+  }
+}
+
+.tours::before {
+  position: absolute;
+  content: "";
+  background-image: url("/img/image/tours/tours-clouds-small.png");
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  width: 837px;
+  height: 279px;
+}
+
+.tours::after {
+  position: absolute;
+  content: "";
+  background-image: url("/img/image/tours/tours-clouds-desktop.png");
+  background-repeat: no-repeat;
+  top: -20px;
+  right: 0;
+  width: 602px;
+  height: 1364px;
+  z-index: -1;
+}
+
+.tours__wrapper {
+  display: flex;
+}
+
+.tours__image {
+  position: relative;
+}
+
+.tours__image::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 61.90%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+.tours__image img {
+  width: 100%;
+}
+
+.tours__text-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 2;
+  color: $color-default-white;
+
+  & h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+
+    margin: 17px;
+  }
+}
+
+.tours__text-list {
+  display: flex;
+  flex-direction: row;
+  gap: 37px;
+  list-style: none;
+}
+
+.tours__text-item {
+  & p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+  }
+
+  &--place {
+    background-color: $color-navy-blue;
+    padding: 9px 25px 8px 39px;
+  }
+}
+
+.tour__table {
+  & dt {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 12px;
+  }
+
+  & dd {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 13px;
+  }
+}
+
+.tours__button {
+  position: relative;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+
+  background-color: $color-transparent;
+  border: none;
+  padding-right: 13px;
+}
+
+.tours__navigation {
+  position: absolute;
+
+  background-color: $color-navy-blue;
+  border: none;
+  width: 37px;
+  height: 35px;
+  top: 0;
+  right: 0;
+}

@@ -33,7 +33,7 @@
               <span class="header__toggle-bar"></span>
               <span class="header__toggle-bar"></span>
             </button>
-            <ul class="header__list">
+            <ul class="header__list" role="navigation">
               <li class="header__list-item"><a class="header__list-link" href="#tours">Туры</a></li>
               <li class="header__list-item"><a class="header__list-link" href="#training">Обучение</a></li>
               <li class="header__list-item"><a class="header__list-link" href="#about">О нас</a></li>
@@ -196,10 +196,182 @@
               </div>
             <div class="promo__pagination swiper-pagination"></div>
             </div>
-
           </div>
         </section>
-        <section class="tours" id="tours"></section>
+        <section class="tours" id="tours">
+          <div class="tours__container container ">
+            <h2>Ближайшие туры</h2>
+            <div class="tours__swiper swiper">
+            <div class="tours__wrapper swiper__wrapper">
+
+              <div class="tours__slide swiper__slide">
+                <div class="tours__image">
+                  <picture>
+                    <source media="(max-width: 767px)" type="image/webp" srcset="img/image/tours/tours-photo-mobile-1.webp 1x, img/image/tours/tours-photo-mobile-1@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/image/tours/tours-photo-mobile-1.png 1x, img/image/tours/tours-photo-mobile-1@2x.png 2x">
+                    <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/tours/tours-photo-tablet-1.webp 1x, img/image/tours/tours-photo-tablet-1@2x.webp 2x">
+                    <source media="(max-width: 1199px)" srcset="img/image/tours/tours-photo-tablet-1.png 1x, img/image/tours/tours-photo-tablet-1@2x.png 2x">
+                    <source type="image/webp" srcset="img/image/tours/tours-photo-desktop-1.webp 1x, img/image/tours/tours-photo-desktop-1@2x.webp 2x">
+                    <img src="img/image/tours/tours-photo-desktop-1.png" srcset="img/image/tours/tours-photo-desktop-1@2x.png" width="1440" height="800" alt="Путешествие вокруг Эльбруса">
+                  </picture>
+                </div>
+                <div class="tours__text-container">
+                  <ul class="tours__text-list">
+                    <li class="tours__text-item tours__text-item--place">
+                      <svg width="9" height="12">
+                        <use xlink:href="img/sprite.svg#tours-place"></use>
+                      </svg>
+                      <p>Кавказ</p>
+                    </li>
+                    <li class="tours__text-item tours__text-item--days">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#tours-days"></use>
+                      </svg>
+                      <p>4 дня</p>
+                    </li>
+                    <li class="tours__text-item tours__text-item--nights">
+                      <svg width="9" height="12">
+                        <use xlink:href="img/sprite.svg#tours-nights"></use>
+                      </svg>
+                      <p>3 ночи</p>
+                    </li>
+                  </ul>
+                  <h3>Путешествие вокруг Эльбруса</h3>
+                  <div class="tour__table">
+                    <dl>
+                      <dt>Сложность:</dt>
+                      <dd></dd>
+                    </dl>
+                    <dl>
+                      <dt>Даты набора:</dt>
+                      <dd>12.06-19.06</dd>
+                    </dl>
+                    <dl>
+                      <dt>Группа:</dt>
+                      <dd>до 15 чел.</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tours__slide swiper__slide">
+                <div class="tours__image">
+                  <picture>
+                    <source media="(max-width: 767px)" type="image/webp" srcset="img/image/tours/tours-photo-mobile-2.webp 1x, img/image/tours/tours-photo-mobile-2@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/image/tours/tours-photo-mobile-2.png 1x, img/image/tours/tours-photo-mobile-2@2x.png 2x">
+                    <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/tours/tours-photo-tablet-2.webp 1x, img/image/tours/tours-photo-tablet-2@2x.webp 2x">
+                    <source media="(max-width: 1199px)" srcset="img/image/tours/tours-photo-tablet-2.png 1x, img/image/tours/tours-photo-tablet-2@2x.png 2x">
+                    <source type="image/webp" srcset="img/image/tours/tours-photo-desktop-2.webp 1x, img/image/tours/tours-photo-desktop-2@2x.webp 2x">
+                    <img src="img/image/tours/tours-photo-desktop-2.png" srcset="img/image/tours/tours-photo-desktop-2@2x.png" width="1440" height="800" alt="Путешествие вокруг Эльбруса">
+                  </picture>
+                </div>
+                <div class="tours__text-container">
+                  <ul class="tours__text-list">
+                    <li class="tours__text-item tours__text-item--place">
+                      <svg width="9" height="12">
+                        <use xlink:href="img/sprite.svg#tours-place"></use>
+                      </svg>
+                      <p>Алтай</p>
+                    </li>
+                    <li class="tours__text-item tours__text-item--days">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#tours-days"></use>
+                      </svg>
+                      <p>14 дней</p>
+                    </li>
+                    <li class="tours__text-item tours__text-item--nights">
+                      <svg width="9" height="12">
+                        <use xlink:href="img/sprite.svg#tours-nights"></use>
+                      </svg>
+                      <p>13 ночей</p>
+                    </li>
+                  </ul>
+                  <h3>Путь к подножию Белухи</h3>
+                  <div class="tour__table">
+                    <dl>
+                      <dt>Сложность:</dt>
+                      <dd></dd>
+                    </dl>
+                    <dl>
+                      <dt>Даты набора:</dt>
+                      <dd>14.06-23.06</dd>
+                    </dl>
+                    <dl>
+                      <dt>Группа:</dt>
+                      <dd>до 25 чел.</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tours__slide swiper__slide">
+                <div class="tours__image">
+                  <picture>
+                    <source media="(max-width: 767px)" type="image/webp" srcset="img/image/tours/tours-photo-mobile-3.webp 1x, img/image/tours/tours-photo-mobile-3@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/image/tours/tours-photo-mobile-3.png 1x, img/image/tours/tours-photo-mobile-3@2x.png 2x">
+                    <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/tours/tours-photo-tablet-3.webp 1x, img/image/tours/tours-photo-tablet-3@2x.webp 2x">
+                    <source media="(max-width: 1199px)" srcset="img/image/tours/tours-photo-tablet-3.png 1x, img/image/tours/tours-photo-tablet-3@2x.png 2x">
+                    <source type="image/webp" srcset="img/image/tours/tours-photo-desktop-3.webp 1x, img/image/tours/tours-photo-desktop-3@2x.webp 2x">
+                    <img src="img/image/tours/tours-photo-desktop-3.png" srcset="img/image/tours/tours-photo-desktop-3@2x.png" width="1440" height="800" alt="Путешествие вокруг Эльбруса">
+                  </picture>
+                </div>
+                <div class="tours__text-container">
+                  <ul class="tours__text-list">
+                    <li class="tours__text-item tours__text-item--place">
+                      <svg width="9" height="12">
+                        <use xlink:href="img/sprite.svg#tours-place"></use>
+                      </svg>
+                      <p>Адыгея</p>
+                    </li>
+                    <li class="tours__text-item tours__text-item--days">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#tours-days"></use>
+                      </svg>
+                      <p>7 дней</p>
+                    </li>
+                    <li class="tours__text-item tours__text-item--nights">
+                      <svg width="9" height="12">
+                        <use xlink:href="img/sprite.svg#tours-nights"></use>
+                      </svg>
+                      <p>6 ночей</p>
+                    </li>
+                  </ul>
+                  <h3>Через Фишт к Черному морю</h3>
+                  <div class="tour__table">
+                    <dl>
+                      <dt>Сложность:</dt>
+                      <dd></dd>
+                    </dl>
+                    <dl>
+                      <dt>Даты набора:</dt>
+                      <dd>15.07-19.07</dd>
+                    </dl>
+                    <dl>
+                      <dt>Группа:</dt>
+                      <dd>до 22 чел.</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <button class="tours__navigation tours__navigation--prev swiper-button-prev" type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
+              <svg width="13" height="9">
+                <use xlink:href="img/sprite.svg#button__arrow"></use>
+              </svg>
+            </button>
+            <button class="tours__navigation tours__navigation--next swiper-button-next" type="button">
+              <span class="visually-hidden">Следующий слайд</span>
+              <svg width="13" height="9">
+                <use xlink:href="img/sprite.svg#button__arrow"></use>
+              </svg>
+            </button>
+            </div>
+
+          </div>
+        <button class="tours__button">Показать все туры</button>
+        </section>
         <section class="training" id="training"></section>
         <section class="about" id="about"></section>
         <section class="reviews" id="reviews"></section>
@@ -210,7 +382,42 @@
       </main>
       <footer class="footer">
         <div class="footer__container container">
-          
+          <div class="footer__top">
+            <a class="footer__logo" href="index.html" aria-label="Логотип компании">
+              <svg width="205" height="62">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <ul class="footer__list" role="navigation">
+              <li class="footer__list-item"><a class="footer__list-link" href="#tours">Туры</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#training">Обучение</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#about">О нас</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#reviews">Отзывы</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#gallery">Фотографии</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#contacts">Контакты</a></li>
+            </ul>
+            <a class="footer__phone" href="tel:+78007253232">8 800 725 32 32</a>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__social">
+              <a href="#" class="footr__social-link" aria-label="Вконтакте">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#footer-social-vk"></use>
+                </svg>
+              </a>
+              <a href="#" class="footer_social-link" aria-label="Однокласники">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#footer-social-ok"></use>
+                </svg>
+              </a>
+              <a href="#" class="footer__socil-link" aria-label="Редит">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite.svg#footer-social-reddit"></use>
+                </svg>
+              </a>
+            </div>
+            <a href="#" class="footer__bottom-link" aria-label="конфиденциальность">Политика конфиденциальности</a>
+          </div>
         </div>
       </footer>
     </div>

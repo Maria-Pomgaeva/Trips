@@ -19,4 +19,29 @@ export const initSwiper = function () {
 
   promoImage.controller.control = promoContent;
   promoContent.controller.control = promoImage;
+
+  const swiperTours = new Swiper ('.tours__swiper', {
+    navigation: {
+      nextEl: '.tours__navigation--next',
+      prevEl: '.tours__navigation--prev',
+    },
+
+    watchSlidesProgress: true,
+    slideVisibleClass: 'tours__slide--visible',
+    loop: true,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 18,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
 };
