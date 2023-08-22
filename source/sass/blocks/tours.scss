@@ -7,7 +7,20 @@
     font-weight: 800;
     line-height: 35px;
 
+    margin: -35px 0;
     text-shadow: 24px 0px 0px rgba(45, 56, 63, 0.28);
+
+    @include vp-1199 {
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 22px;
+
+      max-width: 156px;
+    }
   }
 }
 
@@ -20,6 +33,10 @@
   left: 0;
   width: 837px;
   height: 279px;
+
+  @include vp-1199 {
+    display: none;
+  }
 }
 
 .tours::after {
@@ -27,15 +44,35 @@
   content: "";
   background-image: url("/img/image/tours/tours-clouds-desktop.png");
   background-repeat: no-repeat;
-  top: -20px;
+  top: 120px;
   right: 0;
   width: 602px;
-  height: 1364px;
+  height: 860px;
   z-index: -1;
+
+  @include vp-1199 {
+    background-image: url(/img/image/tours/tours-clouds-tablet.png);
+    width: 294px;
+    height: 589px;
+    top: 250px;
+    right: 0;
+  }
+
+  @include vp-767 {
+    background-image: url(/img/image/tours/tours-clouds-mobile.png);
+    top: 140px;
+    right: 0;
+    width: 175px;
+    height: 595px;
+  }
 }
 
 .tours__wrapper {
-  display: flex;
+  padding-top: 89px;
+}
+
+.tours__slide {
+  position: relative;
 }
 
 .tours__image {
@@ -56,8 +93,9 @@
 
 .tours__text-container {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
+  margin: 0 20px 28px 20px;
 
   z-index: 2;
   color: $color-default-white;
@@ -67,22 +105,43 @@
     font-weight: 700;
     line-height: 28px;
 
-    margin: 17px;
+    margin: 0 0 38px;
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }
 
 .tours__text-list {
   display: flex;
   flex-direction: row;
-  gap: 37px;
+  align-items: center;
+  gap: 30px;
+
+  padding: 0;
+  margin: 0 0 23px;
   list-style: none;
+
+  @include vp-1199 {
+    gap: 17px;
+  }
 }
 
 .tours__text-item {
+  position: relative;
+  padding: 9px 0 8px 33px;
+
+  @include vp-1199 {
+    padding-left: 25px;
+  }
+
   & p {
     font-size: 12px;
     font-weight: 500;
     line-height: 12px;
+    margin: 0;
   }
 
   &--place {
@@ -91,22 +150,67 @@
   }
 }
 
-.tour__table {
+.tours__text-item--place svg {
+  position: absolute;
+  top: 9px;
+  left: 24px;
+  width: 9px;
+  height: 12px;
+}
+
+.tours__text-item--days svg,
+.tours__text-item--nights svg {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.tours__text-table {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  gap: 45px;
+
+  @include vp-1199 {
+    gap: 25px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -20px;
+    left: 0;
+    width: 80px;
+    height: 1px;
+    background-color: rgb(255, 255, 255, 0.2);
+  }
+
+  & dl {
+    margin: 0;
+  }
+
   & dt {
     font-size: 12px;
     font-weight: 300;
     line-height: 12px;
+
+    margin: 0 0 7px;
   }
 
   & dd {
     font-size: 13px;
     font-weight: 700;
     line-height: 13px;
+
+    margin: 0;
   }
 }
 
 .tours__button {
   position: relative;
+  display: block;
 
   font-size: 16px;
   font-weight: 700;
@@ -116,7 +220,51 @@
 
   background-color: $color-transparent;
   border: none;
-  padding-right: 13px;
+  padding: 0 24px 0 0;
+  margin: 52px auto 0;
+  cursor: pointer;
+}
+
+.tours__button:hover,
+.tours__button:focus {
+  color: $color-resolution-blue;
+}
+
+.tours__button:active {
+  color: $color-navy-blue;
+}
+
+.tours__button:disabled {
+  color: rgba(2, 102, 193, 0.10);
+}
+
+.tours__button svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.tours__button:hover svg,
+.tours__button:focus svg {
+  fill: $color-resolution-blue;
+}
+
+.tours__button:focus svg {
+  fill: $color-navy-blue;
+}
+
+.tours__button:disabled svg {
+  fill: rgba(2, 102, 193, 0.10);
+}
+
+
+
+.tours__button-container {
+  position: absolute;
+  width: 78px;
+  height: 35px;
+  top: 22px;
+  right: 0;
 }
 
 .tours__navigation {
@@ -128,4 +276,49 @@
   height: 35px;
   top: 0;
   right: 0;
+
+  &--prev {
+    transform: rotate(180deg);
+    left: 0;
+  }
+}
+
+.tours__navigation:hover,
+.tours__navigation:focus {
+  background-color: $color-transparent;
+  border: 1px solid $color-resolution-blue;
+}
+
+.tours__navigation:active {
+  background-color: $color-resolution-blue;
+}
+
+.tours__navigation:disabled {
+  opacity: 0.2;
+}
+
+.tours__navigation svg {
+  position: absolute;
+  width: 13px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: $color-default-white;
+  color: $color-default-white;
+}
+
+.tours__navigation:hover svg,
+.tours__navigation:focus svg {
+  fill: $color-resolution-blue;
+  color: $color-resolution-blue;
+}
+
+.tours__navigation:active svg {
+  fill: $color-default-white;
+  color: $color-default-white;
+}
+
+.tours__navigation:disabled svg {
+  opacity: 0.2;
 }

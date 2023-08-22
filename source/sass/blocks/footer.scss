@@ -122,12 +122,62 @@
 }
 
 .footer__social {
-  display: flex;
-  gap: 15px;
+  position: relative;
+  width: 120px;
+  height: 30px;
 }
 
-.footr__social-link {
+.footer__social-link {
+  position: absolute;
+  width: 30px;
   height: 30px;
+
+  background-color: $color-default-white;
+  border: 1px solid rgb(2, 102, 193, 0.1);
+
+  &--vk {
+    top: 0;
+    left: 0;
+  }
+
+  &--ok {
+    left: 45px;
+    top: 0;
+  }
+
+  &--reddit {
+    top: 0;
+    right: 0;
+  }
+}
+
+.footer__social-link:hover {
+  border: 1px solid $color-elephant;
+}
+
+.footer__social-link:active {
+  background-color: $color-navy-blue;
+  border: 1px solid $color-transparent;
+}
+
+.footer__social-link:disabled {
+  opacity: 0.3;
+}
+
+.footer__social-link svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer__social-link:active svg {
+  fill: $color-default-white;
+  color: $color-default-white;
+}
+
+.footer__social-link:disabled svg {
+  opacity: 0.3;
 }
 
 .footer__bottom-link {

@@ -44,4 +44,54 @@ export const initSwiper = function () {
       },
     },
   });
+
+  const swiperTraining = new Swiper ('.training__swiper', {
+    navigation: {
+      prevEl: '.training__navigation--prev',
+      nextEl: '.training__navigation--next',
+    },
+
+    watchSlidesProgress: true,
+    slideVisibleClass: 'training__slide--visible',
+    loop: true,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 18,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+  });
+
+  const swiperReviews = new Swiper ('.reviews__swiper', {
+    navigation: {
+      prevEl: '.reviews__navigation--prev',
+      nextEl: '.reviews__navigation--next',
+    },
+
+    watchSlidesProgress: true,
+    slideVisibleClass: 'reviews__slide--visible',
+    loop: true,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 1.5,
+        spaceBetween: 18,
+      },
+      1200: {
+        slidesPerView: 1.5,
+        spaceBetween: 30,
+      },
+    },
+  });
 };

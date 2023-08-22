@@ -1,0 +1,64 @@
+
+.navigation {
+  width: 78px;
+  height: 35px;
+  position: absolute;
+  top: 22px;
+  right: 0;
+}
+
+.navigation__button {
+  position: absolute;
+
+  background-color: $color-navy-blue;
+  border: none;
+  width: 37px;
+  height: 35px;
+  top: 0;
+  right: 0;
+
+  &--prev {
+    transform: rotate(180deg);
+    left: 0;
+  }
+}
+
+.navigation__button:hover,
+.navigation__button:focus {
+  background-color: $color-transparent;
+  border: 1px solid $color-resolution-blue;
+}
+
+.navigation__button:active {
+  background-color: $color-resolution-blue;
+}
+
+.navigation__button:disabled {
+  opacity: 0.2;
+}
+
+.navigation__button svg {
+  position: absolute;
+  width: 13px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: $color-default-white;
+  color: $color-default-white;
+}
+
+.navigation__button:hover svg,
+.navigation__button:focus svg {
+  fill: $color-resolution-blue;
+  color: $color-resolution-blue;
+}
+
+.navigation__button:active svg {
+  fill: $color-default-white;
+  color: $color-default-white;
+}
+
+.navigation__button:disabled svg {
+  opacity: 0.2;
+}
