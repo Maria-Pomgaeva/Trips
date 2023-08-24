@@ -1,8 +1,9 @@
 .about {
   position: relative;
-  display: flex;
 
   padding: 95px 0 50px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   @include vp-1199 {
     padding: 80px 0 70px;
@@ -10,19 +11,42 @@
 
   @include vp-767 {
     padding: 0 0 60px;
-
-    flex-direction: column;
   }
 }
 
 .about::before {
   position: absolute;
   content: "";
+  top: 0;
+  left: 0;
+  width: 735px;
+  height: 474px;
+  z-index: -1;
+
+  background-image: url("/img/image/about/about-photo-desktop.png");
+  background-repeat: no-repeat;
+
+  @include vp-1199 {
+    width: 399px;
+    height: 402px;
+    background-image: url("/img/image/about/about-photo-tablet.png");
+  }
+
+  @include vp-767 {
+    width: 320px;
+    height: 402px;
+    background-image: url("/img/image/about/about-photo-mobile.png");
+  }
+}
+
+.about::after {
+  position: absolute;
+  content: "";
   background-image: url("/img/image/about/about-clouds.png");
   background-repeat: no-repeat;
   top: -120px;
   right: 0;
-  width: 840px;
+  width: 618px;
   height: 280px;
 
   @include vp-1199 {
@@ -32,10 +56,21 @@
 
 .about__container {
   display: flex;
+  padding: 0;
+  margin-left: auto;
+  margin-right: 120px;
   max-width: 585px;
+
+  @include vp-1199 {
+    max-width: 324px;
+    margin-right: 45px;
+  }
 
   @include vp-767 {
     flex-direction: column;
+    max-width: 290px;
+    margin-right: auto;
+    padding-top: 448px;
   }
 }
 
@@ -72,7 +107,7 @@
     font-weight: 700;
     line-height: 21px;
 
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 
     @include vp-1199 {
       font-size: 18px;
@@ -91,15 +126,15 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
-
-    &:not(:last-child) {
-      margin: 0 0 25px;
-    }
+    margin: 0 0 25px;
 
     @include vp-767 {
-      &:not(:last-child) {
-        margin-bottom: 40px;
-      }
+      margin-bottom: 40px;
     }
+
+    &:last-of-type {
+      margin: 0;
+    }
+
   }
 }

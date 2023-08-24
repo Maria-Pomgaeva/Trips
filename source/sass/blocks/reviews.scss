@@ -17,7 +17,7 @@
     line-height: 35px;
 
     text-shadow: 24px 0px 0px rgba(45, 56, 63, 0.28);
-    margin: 0 0 30px;
+    margin: 0 0 -45px;
 
     @include vp-1199 {
       font-size: 25px;
@@ -29,6 +29,11 @@
       line-height: 22px;
     }
   }
+}
+
+.reviews__swiper {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .reviews__wrapper {
@@ -60,6 +65,8 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+
+    max-width: 290px;
   }
 }
 
@@ -75,6 +82,11 @@
 
   @include vp-1199 {
     padding: 0;
+    max-width: 294px;
+  }
+
+  @include vp-767 {
+    max-width: 250px;
   }
 
   & p {
@@ -125,7 +137,15 @@
   width: 78px;
   height: 35px;
   top: 22px;
-  right: 0;
+  right: 120px;
+
+  @include vp-1199 {
+    right: 45px;
+  }
+
+  @include vp-767 {
+    right: 15px;
+  }
 }
 
 .reviews__navigation {
@@ -141,6 +161,10 @@
   &--prev {
     transform: rotate(180deg);
     left: 0;
+  }
+
+  &--next {
+    right: 0;
   }
 }
 

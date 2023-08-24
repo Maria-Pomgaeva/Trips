@@ -1,4 +1,5 @@
 .adv {
+  position: relative;
   padding: 0 0 100px;
 
   @include vp-1199 {
@@ -10,6 +11,38 @@
   }
 }
 
+.adv::before {
+  position: absolute;
+  content: "";
+  top: -300px;
+  left: 0;
+  width: 705px;
+  height: 391px;
+
+  background-image: url(/img/image/adv/adv-clouds-1.png);
+  background-repeat: no-repeat;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.adv::after {
+  position: absolute;
+  content: "";
+  top: -90px;
+  right: 0;
+  width: 602px;
+  height: 263px;
+
+  background-image: url(/img/image/adv/adv-clouds-2.png);
+  background-repeat: no-repeat;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
 .adv__container {
   & h2 {
     font-size: 35px;
@@ -17,6 +50,7 @@
     line-height: 35px;
 
     text-shadow: 24px 0px 0px rgba(45, 56, 63, 0.28);
+    text-align: center;
 
     @include vp-1199 {
       font-size: 25px;
@@ -31,33 +65,65 @@
 }
 
 .adv__swiper {
-  @include vp-1199 {
-    display: none;
-  }
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .adv__wrapper {
-  display: flex;
+  padding-bottom: 85px;
+
+  @include vp-1199 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    gap: 15px;
+  }
 }
 
 .adv__slide {
+  position: relative;
   display: flex;
   flex-direction: column;
+  text-align: center;
 
-  padding: 40px 20px;
+  padding: 20px 40px;
+
+  min-height: 329px;
+  border: 1px solid rgba(2, 102, 193, 0.10);
+
+  background-color: $color-default-white;
+  background-repeat: no-repeat;
+  background-size: 54px 54px;
+  background-position: top center;
+  background-position-y: 20px;
 
   @include vp-1199 {
     padding: 30px 20px;
+
+    min-width: 324px;
+    max-height: 272px;
+    margin-right: 0;
+    background-position-y: 30px;
   }
 
   @include vp-767 {
     padding: 20px 10px;
+
+    min-width: 290px;
+    min-height: 244px;
+    background-position-y: 20px;
   }
 
   & h3 {
     font-size: 18px;
     font-weight: 600;
     line-height: 18px;
+
+    margin: 84px 0 15px;
 
     @include vp-1199 {
       font-size: 16px;
@@ -75,9 +141,101 @@
     font-weight: 400;
     line-height: 22px;
 
+    margin: 0;
+    padding: 0;
+
     @include vp-1199 {
       font-size: 12px;
       line-height: 18px;
     }
   }
+
+  &--level {
+    background-image: url("/img/svg/adv-icon-level.svg");
+  }
+
+  &--crown {
+    background-image: url("/img/svg/adv-icon-crown.svg");
+  }
+
+  &--boots {
+    background-image: url("/img/svg/adv-icon-boots.svg");
+  }
+
+  &--path {
+    background-image: url("/img/svg/adv-icon-path.svg");
+  }
+
+  &--leaf {
+    background-image: url("/img/svg/adv-icon-leaf.svg");
+  }
+}
+
+.adv__button-container {
+  position: absolute;
+  width: 78px;
+  height: 35px;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+}
+
+.adv__navigation {
+  position: absolute;
+
+  background-color: $color-navy-blue;
+  border: none;
+  width: 37px;
+  height: 35px;
+  top: 0;
+  right: 0;
+
+  &--prev {
+    transform: rotate(180deg);
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+}
+
+.adv__navigation:hover,
+.adv__navigation:focus {
+  background-color: $color-transparent;
+  border: 1px solid $color-resolution-blue;
+}
+
+.adv__navigation:active {
+  background-color: $color-resolution-blue;
+}
+
+.adv__navigation:disabled {
+  opacity: 0.2;
+}
+
+.adv__navigation svg {
+  position: absolute;
+  width: 13px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: $color-default-white;
+  color: $color-default-white;
+}
+
+.adv__navigation:hover svg,
+.adv__navigation:focus svg {
+  fill: $color-resolution-blue;
+  color: $color-resolution-blue;
+}
+
+.adv__navigation:active svg {
+  fill: $color-default-white;
+  color: $color-default-white;
+}
+
+.adv__navigation:disabled svg {
+  opacity: 0.2;
 }
