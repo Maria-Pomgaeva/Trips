@@ -1,0 +1,41 @@
+.head {
+  & span {
+    font-size: 55px;
+    font-weight: 800;
+    color: rgba(45, 56, 63, 0.03);
+    line-height: 55px;
+    margin-left: -2px;
+
+    @include vp-1199 {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  & h2 {
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 35px;
+
+    margin-top: -38px;
+
+    @include vp-1199 {
+      font-size: 25px;
+      line-height: 25px;
+
+      margin-top: -28px;
+    }
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 22px;
+
+      margin-top: -25px;
+    }
+  }
+}

@@ -12,21 +12,9 @@
 
 .gallery__container {
   & h2 {
-    font-size: 35px;
-    font-weight: 800;
-    line-height: 35px;
-
-    text-shadow: 24px 0px 0px rgba(45, 56, 63, 0.28);
-    margin: 0 0 27px;
-
-    @include vp-1199 {
-      font-size: 25px;
-      line-height: 25px;
-    }
+    margin-bottom: 27px;
 
     @include vp-767 {
-      font-size: 22px;
-      line-height: 22px;
       margin-bottom: 15px;
     }
   }
@@ -59,28 +47,54 @@
 .gallery__swiper {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.gallery__wrapper {
+  padding-top: 88px;
+  height: 450px;
 
   @include vp-767 {
     height: 260px;
   }
 }
 
-.gallery__wrapper {
-  padding-top: 88px;
-  height: 450px;
-}
-
 .gallery__image img {
   width: 100%;
 }
 
-.gallery__image--three,
-.gallery__image--six {
-  margin-top: 6px;
-  height: 265px;
+.gallery__image {
+  &--one img,
+  &--four img {
+    width: 275px;
+    height: 449px;
 
-  @include vp-767 {
-    margin-top: 3px;
+    @include vp-767 {
+      width: 159px;
+      height: 260px;
+    }
+  }
+
+  &--two img,
+  &--five img {
+    width: 298px;
+    height: 179px;
+
+    @include vp-767 {
+      width: 158px;
+      height: 103px;
+    }
+  }
+
+  &--three img,
+  &--six img {
+    margin-top: 6px;
+    height: 265px;
+
+    @include vp-767 {
+      margin-top: 3px;
+      width: 158px;
+      height: 153px;
+    }
   }
 }
 
@@ -89,14 +103,14 @@
   width: 78px;
   height: 35px;
   top: 22px;
-  right: 0;
+  right: 120px;
 
   @include vp-1199 {
-    right: 0;
+    right: 45px;
   }
 
   @include vp-767 {
-    right: 0;
+    right: 15px;
   }
 }
 
@@ -124,6 +138,7 @@
 .gallery__navigation:focus {
   background-color: $color-transparent;
   border: 1px solid $color-resolution-blue;
+  outline: none;
 }
 
 .gallery__navigation:active {

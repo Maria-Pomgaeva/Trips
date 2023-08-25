@@ -1,25 +1,22 @@
 .training {
-  padding: 20px 0 100px;
+  padding: 102px 0 0;
+
+  @include vp-1199 {
+    padding-top: 70px;
+  }
+
+  @include vp-767 {
+    padding-top: 60px;
+  }
 
   & h2 {
-    font-size: 35px;
-    font-weight: 800;
-    line-height: 35px;
-
-    text-shadow: 24px 0px 0px rgba(45, 56, 63, 0.28);
-    margin: 0 0 38px;
+    margin-bottom: 38px;
 
     @include vp-1199 {
-      font-size: 25px;
-      line-height: 25px;
-
       margin-bottom: 26px;
     }
 
     @include vp-767 {
-      font-size: 22px;
-      line-height: 22px;
-
       margin-bottom: 18px;
     }
   }
@@ -64,13 +61,14 @@
     }
   }
 }
+
 .training__swiper {
   padding: 0 22px 22px;
   margin: 0 -22px -22px;
 
   @include vp-767 {
-    padding: 0 15px 15px;
-    margin: 0 -15px -15px;
+    padding: 0 15px 22px;
+    margin: 0px -15px -22px;
   }
 }
 
@@ -83,7 +81,7 @@
 
 .training__slide {
   border: 1px solid $color-default-white;
-  box-shadow: 0px 0px 30px 0px rgba(28, 51, 116, 0.10);
+  box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
 
   padding: 20px 20px 0;
   min-height: 377px;
@@ -135,8 +133,10 @@
   border: 1px solid rgb(2, 102, 193, 0.1);
 }
 
-.training__link:hover {
+.training__link:hover,
+.training__link:focus {
   border: 1px solid $color-elephant;
+  outline: none;
 }
 
 .training__link:active {
@@ -230,19 +230,19 @@
   background-size: 24px 24px;
 
   &--map {
-    background-image: url(/img/svg/training-map.svg);
+    background-image: url(../img/svg/training-map.svg);
   }
 
   &--boots {
-    background-image: url(/img/svg/training-boots.svg);
+    background-image: url(../img/svg/training-boots.svg);
   }
 
   &--tree {
-    background-image: url(/img/svg/training-pine-tree.svg);
+    background-image: url(../img/svg/training-pine-tree.svg);
   }
 
   &--mountain {
-    background-image: url(/img/svg/training-mountain.svg);
+    background-image: url(../img/svg/training-mountain.svg);
   }
 
   @include vp-1199 {
@@ -371,7 +371,7 @@
   width: 78px;
   height: 35px;
   top: 22px;
-  right: 0;
+  right: 25px;
 }
 
 .training__navigation {
@@ -398,6 +398,7 @@
 .training__navigation:focus {
   background-color: $color-transparent;
   border: 1px solid $color-resolution-blue;
+  outline: none;
 }
 
 .training__navigation:active {

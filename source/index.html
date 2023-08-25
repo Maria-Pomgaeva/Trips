@@ -16,6 +16,7 @@
     <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Light.woff2" as="font" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" rel="nofollow" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" /> -->
   </head>
   <body>
     <div class="wrapper">
@@ -27,6 +28,7 @@
             </svg>
           </a>
           <nav class="header__nav header__nav--closed header__nav--nojs">
+            <div class="header__overlay">
             <button class="header__toggle" type="button">
               <span class="visually-hidden">Открыть меню</span>
               <span class="header__toggle-bar"></span>
@@ -41,6 +43,7 @@
               <li class="header__list-item"><a class="header__list-link" href="#gallery">Фотографии</a></li>
               <li class="header__list-item"><a class="header__list-link" href="#contacts">Контакты</a></li>
             </ul>
+            </div>
           </nav>
           <a class="header__phone" href="tel:+78007253232">8 800 725 32 32</a>
         </div>
@@ -200,7 +203,10 @@
         </section>
         <section class="tours" id="tours">
           <div class="tours__container container">
-            <h2>Ближайшие туры</h2>
+            <div class="head">
+              <span>Ближайшие туры</span>
+              <h2>Ближайшие туры</h2>
+            </div>
             <div class="tours__swiper swiper">
               <div class="tours__wrapper swiper-wrapper">
                 <div class="tours__slide swiper-slide">
@@ -387,10 +393,12 @@
             </button>
           </div>
         </section>
-
         <section class="training" id="training">
           <div class="training__container container">
-            <h2>Обучение</h2>
+            <div class="head">
+              <span>Обучение</span>
+              <h2>Обучение</h2>
+            </div>
             <p>Обучение проводится квалифицированными специалистами, за&nbsp;плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и&nbsp;других.</p>
             <h3>Наши инструкторы</h3>
             <div class="training__swiper swiper">
@@ -536,7 +544,10 @@
         <section class="about" id="about">
           <div class="about__container container">
             <div class="about__text-container">
-              <h2>О нас</h2>
+              <div class="head">
+                <span>О нас</span>
+                <h2>О нас</h2>
+              </div>
               <h3>История компании</h3>
               <p>В&nbsp;далеком 2000 году мы&nbsp;начали заниматься туризмом&nbsp;&mdash; походы, поездки, восхождения, нам это настолько понравилось, что мы&nbsp;этим стали жить. Спустя 5&nbsp;лет, в&nbsp;2005 году мы&nbsp;основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
               <h3>Наша цель </h3>
@@ -546,7 +557,10 @@
         </section>
         <section class="reviews" id="reviews">
           <div class="reviews__container container">
-            <h2>Отзывы</h2>
+            <div class="head">
+              <span>Отзывы</span>
+              <h2>Отзывы</h2>
+            </div>
           </div>
             <div class="reviews__swiper swiper">
               <div class="reviews__wrapper swiper-wrapper">
@@ -558,8 +572,9 @@
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/reviews/reviews-tablet-1.webp 1x, img/image/reviews/reviews-tablet-1@2x.webp 2x">
                       <source media="(max-width: 1199px)" srcset="img/image/reviews/reviews-tablet-1.png 1x, img/image/reviews/reviews-tablet-1@2x.png 2x">
                       <source type="image/webp" srcset="img/image/reviews/reviews-desktop-1.webp 1x, img/image/reviews/reviews-desktop-1@2x.webp 2x">
-                      <img src="img/image/reviews/reviews-desktop-1.png" srcset="img/image/reviews/reviews-desktop-1@2x.png" width="258" height="253" alt="Наши гости">
+                      <img data-src="img/image/reviews/reviews-desktop-1.png" class="swiper-lazy" srcset="img/image/reviews/reviews-desktop-1@2x.png" width="258" height="253" alt="Наши гости">
                     </picture>
+                    <div class="swiper-lazy-preloader"></div>
                   </div>
                   <div class="reviews__text">
                     <p>Осенью ходили в&nbsp;поход на&nbsp;Алтай с&nbsp;друзьями. Впечатления потрясающие! Инструкторы&nbsp;&mdash; настоящие эксперты&nbsp;&mdash; всему научили, все показали. Делились увлекательными историями о&nbsp;местах, людях, культуре места.</p>
@@ -577,8 +592,9 @@
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/reviews/reviews-tablet-2.webp 1x, img/image/reviews/reviews-tablet-2@2x.webp 2x">
                       <source media="(max-width: 1199px)" srcset="img/image/reviews/reviews-tablet-2.png 1x, img/image/reviews/reviews-tablet-2@2x.png 2x">
                       <source type="image/webp" srcset="img/image/reviews/reviews-desktop-2.webp 1x, img/image/reviews/reviews-desktop-2@2x.webp 2x">
-                      <img src="img/image/reviews/reviews-desktop-2.png" srcset="img/image/reviews/reviews-desktop-2@2x.png" width="258" height="253" alt="Наши гости">
+                      <img data-src="img/image/reviews/reviews-desktop-2.png" class="swiper-lazy" srcset="img/image/reviews/reviews-desktop-2@2x.png" width="258" height="253" alt="Наши гости">
                     </picture>
+                    <div class="swiper-lazy-preloader"></div>
                   </div>
                   <div class="reviews__text">
                     <p>Хороший полноценный поход с&nbsp;разнообразными локациями. В&nbsp;начале дорога идет по&nbsp;лыжне, далее прошли мимо полигона, по&nbsp;болотам, у&nbsp;озер и&nbsp;лесных ручьев, остатков дач конца 19&nbsp;века. Было очень интересно!</p>
@@ -596,8 +612,9 @@
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/reviews/reviews-tablet-3.webp 1x, img/image/reviews/reviews-tablet-3@2x.webp 2x">
                       <source media="(max-width: 1199px)" srcset="img/image/reviews/reviews-tablet-3.png 1x, img/image/reviews/reviews-tablet-3@2x.png 2x">
                       <source type="image/webp" srcset="img/image/reviews/reviews-desktop-3.webp 1x, img/image/reviews/reviews-desktop-3@2x.webp 2x">
-                      <img src="img/image/reviews/reviews-desktop-3.png" srcset="img/image/reviews/reviews-desktop-3@2x.png" width="258" height="253" alt="Наши гости">
+                      <img data-src="img/image/reviews/reviews-desktop-3.png" class="swiper-lazy" srcset="img/image/reviews/reviews-desktop-3@2x.png" width="258" height="253" alt="Наши гости">
                     </picture>
+                    <div class="swiper-lazy-preloader"></div>
                   </div>
                   <div class="reviews__text">
                     <p>Ранее не&nbsp;ходила на&nbsp;такие длинные дистанции. В&nbsp;первый день прошли около 30&nbsp;км, физически я&nbsp;устала на&nbsp;18&nbsp;км, поэтому не&nbsp;была уверена, пройду&nbsp;ли до&nbsp;конца. Но&nbsp;я&nbsp;справилась. Второй день прошел легче, чем ожидала, видимо организм уже привык.</p>
@@ -615,8 +632,9 @@
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/reviews/reviews-tablet-4.webp 1x, img/image/reviews/reviews-tablet-4@2x.webp 2x">
                       <source media="(max-width: 1199px)" srcset="img/image/reviews/reviews-tablet-4.png 1x, img/image/reviews/reviews-tablet-4@2x.png 2x">
                       <source type="image/webp" srcset="img/image/reviews/reviews-desktop-4.webp 1x, img/image/reviews/reviews-desktop-4@2x.webp 2x">
-                      <img src="img/image/reviews/reviews-desktop-4.png" srcset="img/image/reviews/reviews-desktop-4@2x.png" width="258" height="253" alt="Наши гости">
+                      <img data-src="img/image/reviews/reviews-desktop-4.png" class="swiper-lazy" srcset="img/image/reviews/reviews-desktop-4@2x.png" width="258" height="253" alt="Наши гости">
                     </picture>
+                    <div class="swiper-lazy-preloader"></div>
                   </div>
                   <div class="reviews__text">
                     <p>Это был опыт, изменивший мою жизнь! Думала, не&nbsp;справлюсь, но&nbsp;все получилось! Дух захватывает, когда наконец-то, преодолев все трудности и&nbsp;препятствия, взбираешься на&nbsp;вершину.</p>
@@ -644,7 +662,10 @@
         </section>
         <section class="adv" id="adv">
           <div class="adv__container container">
-            <h2>Преимущества</h2>
+            <div class="head">
+              <span>Преимущества</span>
+              <h2>Преимущества</h2>
+            </div>
           </div>
           <div class="adv__swiper swiper">
             <div class="adv__wrapper swiper-wrapper">
@@ -692,13 +713,16 @@
         </section>
         <section class="gallery" id="gallery">
           <div class="gallery__container container">
-            <h2>Фотогалерея</h2>
+            <div class="head">
+              <span>Фотогалерея</span>
+              <h2>Фотогалерея</h2>
+            </div>
             <p>Добавляйте фото в&nbsp;Instagram с&nbsp;хэштегом #лайфтур, а&nbsp;также отмечайте нас на&nbsp;фото. Лучшие фотографии украсят этот раздел нашего сайта.</p>
           </div>
           <div class="gallery__swiper swiper">
             <div class="gallery__wrapper swiper-wrapper">
               <div class="gallery__slide swiper-slide">
-                <div class="gallery__image">
+                <div class="gallery__image gallery__image--one">
                   <picture>
                     <source media="(max-width: 767px)" type="image/webp" srcset="img/image/gallery/gallery-image-mobile-1.webp 1x, img/image/gallery/gallery-image-mobile-1@2x.webp 2x">
                     <source media="(max-width: 767px)" srcset="img/image/gallery/gallery-image-mobile-1.jpg 1x, img/image/gallery/gallery-image-mobile-1@2x.jpg 2x">
@@ -709,7 +733,7 @@
               </div>
 
               <div class="gallery__slide swiper-slide">
-                <div class="gallery__image">
+                <div class="gallery__image gallery__image--two">
                   <picture>
                     <source media="(max-width: 767px)" type="image/webp" srcset="img/image/gallery/gallery-image-mobile-2.webp 1x, img/image/gallery/gallery-image-mobile-2@2x.webp 2x">
                     <source media="(max-width: 767px)" srcset="img/image/gallery/gallery-image-mobile-2.jpg 1x, img/image/gallery/gallery-image-mobile-2@2x.jpg 2x">
@@ -728,7 +752,7 @@
               </div>
 
               <div class="gallery__slide swiper-slide">
-                <div class="gallery__image">
+                <div class="gallery__image gallery__image--four">
                   <picture>
                     <source media="(max-width: 767px)" type="image/webp" srcset="img/image/gallery/gallery-image-mobile-4.webp 1x, img/image/gallery/gallery-image-mobile-4@2x.webp 2x">
                     <source media="(max-width: 767px)" srcset="img/image/gallery/gallery-image-mobile-4.jpg 1x, img/image/gallery/gallery-image-mobile-4@2x.jpg 2x">
@@ -739,7 +763,7 @@
               </div>
 
               <div class="gallery__slide swiper-slide">
-                <div class="gallery__image">
+                <div class="gallery__image gallery__image--five">
                   <picture>
                     <source media="(max-width: 767px)" type="image/webp" srcset="img/image/gallery/gallery-image-mobile-5.webp 1x, img/image/gallery/gallery-image-mobile-5@2x.webp 2x">
                     <source media="(max-width: 767px)" srcset="img/image/gallery/gallery-image-mobile-5.jpg 1x, img/image/gallery/gallery-image-mobile-5@2x.jpg 2x">
@@ -758,7 +782,7 @@
               </div>
 
               <div class="gallery__slide swiper-slide">
-                <div class="gallery__image">
+                <div class="gallery__image gallery__image--seven">
                   <picture>
                     <source media="(max-width: 767px)" type="image/webp" srcset="img/image/gallery/gallery-image-mobile-7.webp 1x, img/image/gallery/gallery-image-mobile-7@2x.webp 2x">
                     <source media="(max-width: 767px)" srcset="img/image/gallery/gallery-image-mobile-7.jpg 1x, img/image/gallery/gallery-image-mobile-7@2x.jpg 2x">
@@ -769,7 +793,7 @@
               </div>
 
               <div class="gallery__slide swiper-slide">
-                <div class="gallery__image">
+                <div class="gallery__image gallery__image--two">
                   <picture>
                     <source media="(max-width: 767px)" type="image/webp" srcset="img/image/gallery/gallery-image-mobile-2.webp 1x, img/image/gallery/gallery-image-mobile-2@2x.webp 2x">
                     <source media="(max-width: 767px)" srcset="img/image/gallery/gallery-image-mobile-2.jpg 1x, img/image/gallery/gallery-image-mobile-2@2x.jpg 2x">
@@ -824,24 +848,36 @@
         <section class="contacts" id="contacts">
           <div class="contacts__container container">
             <div class="contacts__text">
-              <h2>Контакты</h2>
+              <div class="head">
+                <span>Контакты</span>
+                <h2>Контакты</h2>
+              </div>
               <p>Свяжитесь с&nbsp;нами любым удобным для вас способом или приходите к&nbsp;нам в&nbsp;гости. Мы&nbsp;будем рады поделиться увлекательными историями и&nbsp;подобрать для вас тур.</p>
               <div class="contacts__wrapper">
                 <dl>
+                  <svg width="26" height="26">
+                    <use xlink:href="img/sprite.svg#contacts-phone"></use>
+                  </svg>
                   <dt>Телефон</dt>
                   <dd><a href="tel:89837454545">8 983 745 45 45</a></dd>
                 </dl>
                 <dl>
+                  <svg width="26" height="26">
+                    <use xlink:href="img/sprite.svg#contacts-mail"></use>
+                  </svg>
                   <dt>E-mail</dt>
                   <dd><a href="mailto:info@lifetour.com">info@lifetour.com</a></dd>
                 </dl>
                 <dl>
+                  <svg width="26" height="26">
+                    <use xlink:href="img/sprite.svg#contacts-pin"></use>
+                  </svg>
                   <dt>Адрес</dt>
                   <dd>г. Москва, пр-т Мира, д. 14, офис 101</dd>
                 </dl>
               </div>
             </div>
-            <div class="contacts__map">
+            <div class="contacts__map" id="map">
             </div>
           </div>
         </section>
@@ -889,5 +925,6 @@
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
+    <!-- <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script> -->
   </body>
 </html>

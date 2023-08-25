@@ -5,7 +5,7 @@ export const menuOpen = () => {
   navHeader.classList.remove('header__nav--nojs');
 
   navToggle.addEventListener('click', function () {
-   if (navHeader.classList.contains('header__nav--closed')) {
+    if (navHeader.classList.contains('header__nav--closed')) {
       navHeader.classList.remove('header__nav--closed');
       navHeader.classList.add('header__nav--opened');
     } else {
@@ -13,4 +13,4 @@ export const menuOpen = () => {
       navHeader.classList.remove('header__nav--opened');
     }
   });
-}
+};
