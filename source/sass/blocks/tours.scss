@@ -22,7 +22,7 @@
 .tours::before {
   position: absolute;
   content: "";
-  background-image: url("/img/image/tours/tours-clouds-small.png");
+  background-image: url("../img/image/tours/tours-clouds-small.png");
   background-repeat: no-repeat;
   bottom: 0;
   left: 0;
@@ -37,7 +37,7 @@
 .tours::after {
   position: absolute;
   content: "";
-  background-image: url("/img/image/tours/tours-clouds-desktop.png");
+  background-image: url("../img/image/tours/tours-clouds-desktop.png");
   background-repeat: no-repeat;
   top: 120px;
   right: 0;
@@ -46,7 +46,7 @@
   z-index: -1;
 
   @include vp-1199 {
-    background-image: url(../img/image/tours/tours-clouds-tablet.png);
+    background-image: url("../img/image/tours/tours-clouds-tablet.png");
     width: 294px;
     height: 589px;
     top: 250px;
@@ -54,7 +54,7 @@
   }
 
   @include vp-767 {
-    background-image: url(../img/image/tours/tours-clouds-mobile.png);
+    background-image: url("../img/image/tours/tours-clouds-mobile.png");
     top: 140px;
     right: 0;
     width: 175px;

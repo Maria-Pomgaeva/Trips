@@ -19,7 +19,7 @@
   width: 705px;
   height: 391px;
 
-  background-image: url(../img/image/adv/adv-clouds-1.png);
+  background-image: url("../img/image/adv/adv-clouds-1.png");
   background-repeat: no-repeat;
 
   @include vp-1199 {
@@ -35,7 +35,7 @@
   width: 602px;
   height: 263px;
 
-  background-image: url(../img/image/adv/adv-clouds-2.png);
+  background-image: url("../img/image/adv/adv-clouds-2.png");
   background-repeat: no-repeat;
 
   @include vp-1199 {
@@ -150,23 +150,23 @@
   }
 
   &--level {
-    background-image: url("/img/svg/adv-icon-level.svg");
+    background-image: url("../img/svg/adv-icon-level.svg");
   }
 
   &--crown {
-    background-image: url("/img/svg/adv-icon-crown.svg");
+    background-image: url("../img/svg/adv-icon-crown.svg");
   }
 
   &--boots {
-    background-image: url("/img/svg/adv-icon-boots.svg");
+    background-image: url("../img/svg/adv-icon-boots.svg");
   }
 
   &--path {
-    background-image: url("/img/svg/adv-icon-path.svg");
+    background-image: url("../img/svg/adv-icon-path.svg");
   }
 
   &--leaf {
-    background-image: url("/img/svg/adv-icon-leaf.svg");
+    background-image: url("../img/svg/adv-icon-leaf.svg");
   }
 }
 
