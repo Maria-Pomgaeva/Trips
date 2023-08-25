@@ -1822,7 +1822,7 @@ button,
   position: absolute;
   top: 13px;
   left: 20px;
-  background-image: url("/img/svg/promo-moon.svg");
+  background-image: url("../img/svg/promo-moon.svg");
   content: "";
   width: 12px;
   height: 12px;
@@ -1832,7 +1832,7 @@ button,
   position: absolute;
   top: 13px;
   left: 20px;
-  background-image: url("/img/svg/promo-level.svg");
+  background-image: url("../img/svg/promo-level.svg");
   content: "";
   width: 12px;
   height: 12px;
@@ -1975,7 +1975,7 @@ button,
 .tours::before {
   position: absolute;
   content: "";
-  background-image: url("/img/image/tours/tours-clouds-small.png");
+  background-image: url("../img/image/tours/tours-clouds-small.png");
   background-repeat: no-repeat;
   bottom: 0;
   left: 0;
@@ -1986,7 +1986,7 @@ button,
 .tours::after {
   position: absolute;
   content: "";
-  background-image: url("/img/image/tours/tours-clouds-desktop.png");
+  background-image: url("../img/image/tours/tours-clouds-desktop.png");
   background-repeat: no-repeat;
   top: 120px;
   right: 0;
@@ -2719,7 +2719,7 @@ button,
   left: 0;
   width: 705px;
   height: 391px;
-  background-image: url(../img/image/adv/adv-clouds-1.png);
+  background-image: url("../img/image/adv/adv-clouds-1.png");
   background-repeat: no-repeat;
 }
 
@@ -2730,7 +2730,7 @@ button,
   right: 0;
   width: 602px;
   height: 263px;
-  background-image: url(../img/image/adv/adv-clouds-2.png);
+  background-image: url("../img/image/adv/adv-clouds-2.png");
   background-repeat: no-repeat;
 }
 
@@ -2792,23 +2792,23 @@ button,
 }
 
 .adv__slide--level {
-  background-image: url("/img/svg/adv-icon-level.svg");
+  background-image: url("../img/svg/adv-icon-level.svg");
 }
 
 .adv__slide--crown {
-  background-image: url("/img/svg/adv-icon-crown.svg");
+  background-image: url("../img/svg/adv-icon-crown.svg");
 }
 
 .adv__slide--boots {
-  background-image: url("/img/svg/adv-icon-boots.svg");
+  background-image: url("../img/svg/adv-icon-boots.svg");
 }
 
 .adv__slide--path {
-  background-image: url("/img/svg/adv-icon-path.svg");
+  background-image: url("../img/svg/adv-icon-path.svg");
 }
 
 .adv__slide--leaf {
-  background-image: url("/img/svg/adv-icon-leaf.svg");
+  background-image: url("../img/svg/adv-icon-leaf.svg");
 }
 
 .adv__button-container {
@@ -3669,7 +3669,7 @@ input:focus:-ms-input-placeholder {
   }
 
   .tours::after {
-    background-image: url(../img/image/tours/tours-clouds-tablet.png);
+    background-image: url("../img/image/tours/tours-clouds-tablet.png");
     width: 294px;
     height: 589px;
     top: 250px;
@@ -3682,6 +3682,10 @@ input:focus:-ms-input-placeholder {
 
   .tours__text-item {
     padding-left: 25px;
+  }
+
+  .tours__text-item--place svg {
+    left: 10px;
   }
 
   .tours__text-table {
@@ -3699,6 +3703,7 @@ input:focus:-ms-input-placeholder {
   .training p {
     margin-bottom: 62px;
     max-width: 560px;
+    margin-bottom: 47px;
   }
 
   .training h3 {
@@ -4104,7 +4109,7 @@ input:focus:-ms-input-placeholder {
   }
 
   .tours::after {
-    background-image: url(../img/image/tours/tours-clouds-mobile.png);
+    background-image: url("../img/image/tours/tours-clouds-mobile.png");
     top: 140px;
     right: 0;
     width: 175px;
@@ -4144,7 +4149,7 @@ input:focus:-ms-input-placeholder {
   .training p {
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 47px;
+    margin: 0;
   }
 
   .training h3 {
@@ -4154,7 +4159,7 @@ input:focus:-ms-input-placeholder {
 
   .training__swiper {
     padding: 0 15px 22px;
-    margin: 0px -15px -22px;
+    margin: 0 -15px -22px;
   }
 
   .training__slide {

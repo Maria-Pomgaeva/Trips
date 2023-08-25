@@ -163,6 +163,10 @@
   left: 24px;
   width: 9px;
   height: 12px;
+
+  @include vp-1199 {
+    left: 10px;
+  }
 }
 
 .tours__text-item--days svg,
