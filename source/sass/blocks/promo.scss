@@ -6,6 +6,16 @@
   color: $color-default-white;
 }
 
+.promo__slide-image,
+.promo__slide-conten {
+  visibility: hidden;
+}
+
+.promo__slide-image.swiper-slide-active,
+.promo__slide-conten.swiper-slide-active {
+  visibility: visible;
+}
+
 .promo__image {
   position: absolute;
   top: 0;

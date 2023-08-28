@@ -40,6 +40,8 @@
 }
 
 .footer__logo {
+  border: 1px solid $color-transparent;
+
   &:focus-visible {
     outline: none;
     border: 1px solid $color-elephant;
@@ -72,6 +74,9 @@
 }
 
 .footer__list-link {
+  padding: 3px 5px;
+  border-bottom: 1px solid $color-transparent;
+
   &:hover {
     border-bottom: 1px solid $color-elephant;
   }

@@ -134,13 +134,10 @@
 }
 
 .reviews__navigation {
-  position: absolute;
-
   background-color: $color-navy-blue;
   border: none;
   width: 37px;
   height: 35px;
-  top: 0;
   right: 0;
 
   &--prev {

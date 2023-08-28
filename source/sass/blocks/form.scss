@@ -1,6 +1,6 @@
 .form {
   position: relative;
-  background-image: url(../img/image/form/form-background-desktop.jpg);
+  background-image: url("../img/image/form/form-background-desktop.jpg");
   background-repeat: no-repeat;
 
   width: 1440px;
@@ -11,14 +11,14 @@
   align-items: center;
 
   @include vp-1199 {
-    background-image: url(../img/image/form/form-background-tablet.jpg);
+    background-image: url("../img/image/form/form-background-tablet.jpg");
 
     width: 768px;
     height: 679px;
   }
 
   @include vp-767 {
-    background-image: url(../img/image/form/form-background-mobile.jpg);
+    background-image: url("../img/image/form/form-background-mobile.jpg");
     width: 100%;
   }
 }
@@ -146,7 +146,7 @@
   border: 1px solid #ff121f;
 }
 
-span.input-message.is-invalid {
+.form__name-label.is-invalid .input-message {
   color: $color-transparent;
   font-size: 0;
 }
@@ -156,15 +156,6 @@ span.input-message.is-invalid {
 .form input:focus-visible {
   border: 1px solid rgb(45, 56, 63, 0.5);
 }
-
-input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
 
 .form__button {
   max-width: 238px;
@@ -180,4 +171,16 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
 
     margin-top: 0;
   }
+}
+
+.form__wrapper input::-webkit-input-placeholder,
+.form__wrapper input::-moz-placeholder,
+.form__wrapper input:-moz-placeholder,
+.form__wrapper input:-ms-input-placeholder,
+.form__wrapper input:focus::-webkit-input-placeholder,
+.form__wrapper input:focus::-moz-placeholder,
+.form__wrapper input:focus:-moz-placeholder,
+.form__wrapper input:focus:-ms-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }

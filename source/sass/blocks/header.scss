@@ -45,8 +45,7 @@
   }
 
   &:focus {
-    border: 1px solid $color-default-white;
-    outline: none;
+    outline: 1px solid $color-default-white;
   }
 }
 
@@ -67,8 +66,8 @@
   }
 }
 
-@include vp-1199 {
-  .header__nav--opened .header__logo svg {
+.header--opened svg {
+  @include vp-1199 {
     color: $color-elephant;
     fill: $color-elephant;
   }
@@ -107,30 +106,9 @@
   }
 }
 
-@include vp-1199 {
-  .header__nav--opened + .header__phone {
+.header--opened + .header__phone {
+  @include vp-1199 {
     color: $color-elephant;
-  }
-}
-
-.header__toggle {
-  position: absolute;
-  top: 11px;
-  left: 45px;
-  padding: 0;
-
-  display: block;
-  width: 26px;
-  height: 26px;
-
-  border: none;
-  background-color: $color-transparent;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-
-  @include vp-767 {
-    top: 0;
-    left: 15px;
   }
 }
 
@@ -145,11 +123,11 @@
   background-color: $color-default-white;
 }
 
-.header__nav--closed {
+.header--closed {
   transition-delay: 0.3s;
 }
 
-.header__nav--closed .header__toggle-bar:nth-of-type(2n) {
+.header--closed .header__toggle-bar:nth-of-type(2n) {
   width: 26px;
   margin-bottom: 8px;
 
@@ -157,64 +135,89 @@
   transition-delay: 0.3s, 0.3s, 0s;
 }
 
-.header__nav--closed .header__toggle-bar:nth-of-type(3n) {
+.header--closed .header__toggle-bar:nth-of-type(3n) {
   width: 17px;
   margin-bottom: 8px;
 }
 
 // Крестик
 
-.header__nav--opened .header__toggle-bar {
+.header--opened .header__toggle-bar {
+  position: absolute;
   transform: rotate(45deg);
   transition-delay: 0.3s;
   height: 2px;
   background-color: $color-elephant;
 }
 
-.header__nav--opened .header__toggle-bar:nth-of-type(2) {
+.header--opened .header__toggle-bar:nth-of-type(2) {
   opacity: 0;
   height: 0;
   margin: -4px 0;
 }
 
-.header__nav--opened .header__toggle-bar:nth-of-type(3) {
+.header--opened .header__toggle-bar:nth-of-type(3) {
   transform: rotate(-45deg);
   transition-delay: 0.3s;
   height: 2px;
+
+  top: 13px;
 }
 
 // Закрытое открытое меню
 
 .header__toggle {
-  display: none;
-}
+  position: absolute;
+  top: 11px;
+  left: 45px;
+  padding: 0;
 
-@include vp-1199 {
-  .header__toggle {
+  width: 26px;
+  height: 26px;
+
+  border: none;
+  background-color: $color-transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  display: none;
+
+  @include vp-1199 {
     display: block;
     z-index: 4;
   }
 
-  .header__nav--closed .header__list {
+  @include vp-767 {
+    top: 0;
+    left: 15px;
+  }
+}
+
+.header--closed .header__list {
+  @include vp-1199 {
     display: none;
   }
+}
 
-  .header__nav--opened .header__list {
+.header--opened .header__list {
+  @include vp-1199 {
     position: absolute;
     top: -40px;
     right: 0;
     left: 0;
     z-index: 3;
+
     padding: 125px 0 70px;
-
     background-color: $color-default-white;
-
-    @include vp-767 {
-      padding: 100px 0 50px;
-    }
   }
 
-  .header__nav--opened .header__overlay::before {
+  @include vp-767 {
+    padding: 100px 0 50px;
+  }
+}
+
+.header--opened .header__overlay::before {
+  @include vp-1199 {
     position: absolute;
     content: "";
     top: 0;
@@ -222,40 +225,52 @@
     width: 100%;
     height: 995px;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
 
-    @include vp-767 {
-      height: 553px;
-    }
+    background: rgba(0, 0, 0, 0.5);
   }
 
-  .header__nav--opened .header__list-item,
-  .header__nav--nojs .header__list-item {
+  @include vp-767 {
+    height: 553px;
+  }
+}
+
+.header--opened .header__list-item,
+.header--nojs .header__list-item {
+  @include vp-1199 {
     width: 100vw;
     padding: 0 0 0 45px;
-
-    @include vp-767 {
-      padding-left: 15px;
-    }
   }
 
-  .header__nav--opened .header__list-item a {
+
+  @include vp-767 {
+    padding-left: 15px;
+  }
+}
+
+.header--opened a {
+  @include vp-1199 {
     color: $color-elephant;
   }
+}
 
-  .header__nav--nojs .header__toggle {
+.header--nojs .header__toggle {
+  @include vp-1199 {
     display: none;
   }
+}
 
-  .header__nav--nojs .header__list {
+.header--nojs .header__list {
+  @include vp-1199 {
     position: static;
     display: block;
 
     min-height: 0;
     margin-top: 30px;
   }
+}
 
-  .header__nav--nojs .header__list-item {
+.header--nojs .header__list-item {
+  @include vp-1199 {
     display: block;
   }
 }
@@ -283,10 +298,6 @@
   font-weight: 400;
   line-height: 16px;
 
-  padding: 3px 5px;
-  border-bottom: 1px solid $color-transparent;
-
-
   @include vp-1199 {
     font-size: 16px;
     font-weight: 700;
@@ -304,6 +315,8 @@
 
 .header__list-link {
   color: $color-default-white;
+  padding: 3px 5px;
+  border-bottom: 1px solid $color-transparent;
 
   &:hover {
     border-bottom: 1px solid $color-default-white;

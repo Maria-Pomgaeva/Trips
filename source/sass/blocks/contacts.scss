@@ -120,12 +120,12 @@
 
       max-width: 168px;
     }
-
-    & a:focus {
-      outline: none;
-      color: $color-resolution-blue;
-    }
   }
+}
+
+.contacts__wrapper a:focus {
+  outline: none;
+  color: $color-resolution-blue;
 }
 
 .contacts__wrapper svg {

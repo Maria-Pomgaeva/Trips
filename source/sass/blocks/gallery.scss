@@ -63,8 +63,7 @@
 }
 
 .gallery__image {
-  &--one img,
-  &--four img {
+  &--big img {
     width: 275px;
     height: 449px;
 
@@ -74,8 +73,7 @@
     }
   }
 
-  &--two img,
-  &--five img {
+  &--small img {
     width: 298px;
     height: 179px;
 
@@ -85,8 +83,7 @@
     }
   }
 
-  &--three img,
-  &--six img {
+  &--medium img {
     margin-top: 6px;
     height: 265px;
 
@@ -115,13 +112,10 @@
 }
 
 .gallery__navigation {
-  position: absolute;
-
   background-color: $color-navy-blue;
   border: none;
   width: 37px;
   height: 35px;
-  top: 0;
   right: 0;
 
   &--prev {

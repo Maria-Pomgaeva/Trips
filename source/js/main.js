@@ -5,7 +5,7 @@ import {menuOpen} from './modules/menu-open';
 import {videoLoad} from './modules/video';
 import {audioLoad} from './modules/audio';
 import {initSwiper} from './modules/swiper';
-import {initialMap} from './modules/map';
+// import {initialMap} from './modules/map';
 
 // ---------------------------------
 
@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     videoLoad();
     audioLoad();
     initSwiper();
-    initialMap();
+    // initialMap();
     const form = new Form();
     window.form = form;
     form.init();

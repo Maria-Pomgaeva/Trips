@@ -99,17 +99,29 @@
   color: $color-default-white;
 
   & h3 {
+    position: relative;
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
 
-    margin: 0 0 38px;
+    padding-bottom: 20px;
+    margin: 0 0 18px;
 
     @include vp-767 {
       font-size: 20px;
       line-height: 24px;
     }
   }
+}
+
+.tours__text-container h3::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 1px;
+  background-color: rgb(255, 255, 255, 0.2);
 }
 
 .tours__text-list {
@@ -192,16 +204,6 @@
     gap: 10px;
   }
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: -20px;
-    left: 0;
-    width: 80px;
-    height: 1px;
-    background-color: rgb(255, 255, 255, 0.2);
-  }
-
   & dl {
     margin: 0;
   }
@@ -282,13 +284,10 @@
 }
 
 .tours__navigation {
-  position: absolute;
-
   background-color: $color-navy-blue;
   border: none;
   width: 37px;
   height: 35px;
-  top: 0;
   right: 0;
 
   &--prev {

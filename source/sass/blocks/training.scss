@@ -33,7 +33,6 @@
     @include vp-1199 {
       margin-bottom: 62px;
       max-width: 560px;
-      margin-bottom: 47px;
     }
 
     @include vp-767 {
@@ -86,6 +85,8 @@
   padding: 20px 20px 0;
   min-height: 377px;
 
+  visibility: hidden;
+
   @include vp-1199 {
     padding: 15px 15px 0;
     min-height: 411px;
@@ -104,6 +105,10 @@
     padding: 0;
     margin: 0;
   }
+}
+
+.training__slide--visible {
+  visibility: visible;
 }
 
 .training__image img {
@@ -230,19 +235,19 @@
   background-size: 24px 24px;
 
   &--map {
-    background-image: url(../img/svg/training-map.svg);
+    background-image: url("../img/svg/training-map.svg");
   }
 
   &--boots {
-    background-image: url(../img/svg/training-boots.svg);
+    background-image: url("../img/svg/training-boots.svg");
   }
 
   &--tree {
-    background-image: url(../img/svg/training-pine-tree.svg);
+    background-image: url("../img/svg/training-pine-tree.svg");
   }
 
   &--mountain {
-    background-image: url(../img/svg/training-mountain.svg);
+    background-image: url("../img/svg/training-mountain.svg");
   }
 
   @include vp-1199 {
@@ -280,9 +285,7 @@
       grid-column: -2 / -1;
     }
   }
-}
 
-.training__item {
   &::after {
     content: "";
     position: absolute;
@@ -310,9 +313,7 @@
       bottom: auto;
     }
   }
-}
 
-.training__item {
   &::before {
     @include vp-1199 {
       content: "";
@@ -375,13 +376,10 @@
 }
 
 .training__navigation {
-  position: absolute;
-
   background-color: $color-navy-blue;
   border: none;
   width: 37px;
   height: 35px;
-  top: 0;
   right: 0;
 
   &--prev {

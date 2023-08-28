@@ -3,19 +3,19 @@ export const initSwiper = function () {
 // eslint-disable-next-line
   const promoImage = new Swiper ('.promo__container-image', {
     pagination: {
-      el: '.swiper-pagination',
+      el: '.promo__pagination',
       clickable: true,
     },
 
     watchSlidesProgress: true,
-    slideVisibleClass: 'trainers__slide--visible',
+    slideVisibleClass: 'promo__slide--visible',
     loop: true,
     slidesPerView: 1,
     simulateTouch: false,
   });
   // eslint-disable-next-line
   const promoContent = new Swiper ('.promo__container-content', {
-    slideVisibleClass: 'trainers__slide--visible',
+    slideVisibleClass: 'promo__slide--visible',
     loop: true,
     slidesPerView: 1,
     simulateTouch: false,
@@ -26,8 +26,8 @@ export const initSwiper = function () {
   // eslint-disable-next-line
   const swiperTours = new Swiper ('.tours__swiper', {
     navigation: {
-      prevEl: '.tours__navigation--prev',
       nextEl: '.tours__navigation--next',
+      prevEl: '.tours__navigation--prev',
     },
 
     watchSlidesProgress: true,
@@ -53,7 +53,6 @@ export const initSwiper = function () {
     navigation: {
       nextEl: '.training__navigation--next',
       prevEl: '.training__navigation--prev',
-
     },
 
     watchSlidesProgress: true,
@@ -84,14 +83,13 @@ export const initSwiper = function () {
     watchSlidesProgress: true,
     slideVisibleClass: 'reviews__slide--visible',
     simulateTouch: false,
+    watchSlidesVisibility: true,
 
     preloadImages: false,
     lazy: {
       loadOnTransitionStart: false,
       loadPrevNext: false,
     },
-
-    watchSlidesVisibility: true,
 
     breakpoints: {
       320: {
@@ -108,34 +106,25 @@ export const initSwiper = function () {
       },
     },
   });
+
+  if (document.documentElement.clientWidth > 1199) {
   // eslint-disable-next-line
-  const swiperAdv = new Swiper ('.adv__swiper', {
-    navigation: {
-      nextEl: '.adv__navigation--next',
-      prevEl: '.adv__navigation--prev',
-    },
+    const swiperAdv = new Swiper ('.adv__swiper', {
+      navigation: {
+        nextEl: '.adv__navigation--next',
+        prevEl: '.adv__navigation--prev',
+      },
 
-    watchSlidesProgress: true,
-    slideVisibleClass: 'adv__slide--visible',
-    simulateTouch: false,
+      watchSlidesProgress: true,
+      slideVisibleClass: 'adv__slide--visible',
+      simulateTouch: false,
 
-    breakpoints: {
-      320: {
-        slidesPerView: 5,
-        autoplay: false,
-      },
-      768: {
-        slidesPerView: 5,
-        autoplay: false,
-      },
-      1200: {
-        slidesPerView: 3.75,
-        spaceBetween: 30,
-        centeredSlides: true,
-        initialSlide: 2,
-      },
-    },
-  });
+      slidesPerView: 3.75,
+      spaceBetween: 30,
+      centeredSlides: true,
+      initialSlide: 2,
+    });
+  }
 
   // eslint-disable-next-line
   const swiperGallery = new Swiper ('.gallery__swiper', {

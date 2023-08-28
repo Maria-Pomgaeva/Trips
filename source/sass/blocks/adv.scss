@@ -45,8 +45,8 @@
 
 .adv__container {
   & span {
-    display: block;
-    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   & h2 {
@@ -97,7 +97,7 @@
   @include vp-1199 {
     padding: 30px 20px;
 
-    min-width: 324px;
+    max-width: 324px;
     max-height: 272px;
     margin-right: 0;
     background-position-y: 30px;
@@ -106,7 +106,7 @@
   @include vp-767 {
     padding: 20px 10px;
 
-    min-width: 290px;
+    max-width: 290px;
     min-height: 244px;
     background-position-y: 20px;
   }
@@ -177,16 +177,17 @@
   bottom: 0;
   left: 50%;
   right: 50%;
+
+  @include vp-1199 {
+    display: none;
+  }
 }
 
 .adv__navigation {
-  position: absolute;
-
   background-color: $color-navy-blue;
   border: none;
   width: 37px;
   height: 35px;
-  top: 0;
   right: 0;
 
   &--prev {
