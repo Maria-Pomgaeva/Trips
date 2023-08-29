@@ -20,7 +20,7 @@ export const initMap = function () {
 
   let myIcon = lMap.icon({
     className: 'map__pin',
-    iconUrl: '../img/svg/map-pin.svg',
+    iconUrl: './img/svg/map-pin.svg',
     iconSize: [48, 48],
     popupAnchor: [0, -20],
   });

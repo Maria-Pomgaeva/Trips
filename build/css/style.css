@@ -3366,6 +3366,7 @@ button,
   right: 0;
   width: 618px;
   height: 280px;
+  z-index: -1;
 }
 
 .about__container {
