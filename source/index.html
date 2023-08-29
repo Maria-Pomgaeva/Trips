@@ -109,20 +109,20 @@
                     </div>
                     <div class="video">
                       <div class="video__container">
-                      <div class="video__image">
-                        <picture>
-                          <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-video-tablet.webp 1x, img/image/promo/promo-video-tablet@2x.webp 2x">
-                          <source media="(max-width: 1199px)" srcset="img/image/promo/promo-video-tablet.jpg 1x, img/image/promo/promo-video-tablet@2x.jpg 2x">
-                          <source type="image/webp" srcset="img/image/promo/promo-video-desktop.webp 1x, img/image/promo/promo-video-desktop@2x.webp 2x">
-                          <img src="img/image/promo/promo-video-desktop.jpg" srcset="img/image/promo/promo-video-desktop@2x.jpg" width="482" height="317" alt="Видео-тур по Кавказу">
-                        </picture>
-                        <a href="#" class="video__button" id="link">
-                          <svg width="56" height="56">
-                            <use xlink:href="img/sprite.svg#promo-button-video"></use>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="video__player" id="player" data-src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1"></div>
+                        <div class="video__image">
+                          <picture>
+                            <source media="(max-width: 1199px)" type="image/webp" srcset="img/image/promo/promo-video-tablet.webp 1x, img/image/promo/promo-video-tablet@2x.webp 2x">
+                            <source media="(max-width: 1199px)" srcset="img/image/promo/promo-video-tablet.jpg 1x, img/image/promo/promo-video-tablet@2x.jpg 2x">
+                            <source type="image/webp" srcset="img/image/promo/promo-video-desktop.webp 1x, img/image/promo/promo-video-desktop@2x.webp 2x">
+                            <img src="img/image/promo/promo-video-desktop.jpg" srcset="img/image/promo/promo-video-desktop@2x.jpg" width="482" height="317" alt="Видео-тур по Кавказу">
+                          </picture>
+                          <a href="#" class="video__button" id="link">
+                            <svg width="14" height="26">
+                              <use xlink:href="img/sprite.svg#promo-button-video"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="video__player" id="player" data-src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1"></div>
                       </div>
                     </div>
                   </div>
@@ -190,7 +190,7 @@
                             </svg>
                           </a>
                         </div>
-                        <div class="audio__play" data-src="https://music.yandex.ru/iframe/#album/25474374"></div>
+                        <div class="audio__player" data-src="https://music.yandex.ru/iframe/#album/25474374?autoplay=1"></div>
                       </div>
                     </div>
                   </div>
@@ -942,8 +942,9 @@
                 </dl>
               </div>
             </div>
-            <div class="contacts__map" id="map">
-            </div>
+            <div class="contacts__map map">
+              <div class="map__block" data-map></div>
+             </div>
           </div>
         </section>
       </main>

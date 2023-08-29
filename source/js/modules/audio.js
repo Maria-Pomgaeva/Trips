@@ -11,6 +11,5 @@ export const audioLoad = () => {
       audio.classList.add('active');
       audio.insertAdjacentHTML('afterbegin', '<iframe src="' + src + '" frameborder="0" style="border:none;width:100%;" width="100%" height="220" ></iframe>');
     });
-
   }
 };
