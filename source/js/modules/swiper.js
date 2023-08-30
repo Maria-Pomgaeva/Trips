@@ -64,7 +64,7 @@ export const initSwiper = function () {
         slidesPerView: 1,
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 18,
       },
       1200: {
@@ -119,7 +119,7 @@ export const initSwiper = function () {
       slideVisibleClass: 'adv__slide--visible',
       simulateTouch: false,
 
-      slidesPerView: 3.75,
+      slidesPerView: 3.5,
       spaceBetween: 30,
       centeredSlides: true,
       initialSlide: 2,

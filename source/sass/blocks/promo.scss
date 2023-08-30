@@ -25,6 +25,10 @@
   z-index: -1;
 }
 
+.promo__image img {
+  width: 100%;
+}
+
 .promo__image::before {
   position: absolute;
   content: "";
@@ -149,7 +153,7 @@
   flex-direction: row;
   gap: 10px;
 
-  margin-top: 150px;
+  margin-top: 149px;
 
   @include vp-1199 {
     display: none;
@@ -225,6 +229,11 @@
     margin-left: -190px;
     margin-top: 50px;
   }
+}
+
+.promo__pagination {
+  bottom: 89px;
+  right: 112px;
 }
 
 .promo__pagination:focus {
