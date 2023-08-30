@@ -65,7 +65,7 @@ export const initSwiper = function () {
       },
       768: {
         slidesPerView: 3,
-        spaceBetween: 18,
+        spaceBetween: 30,
       },
       1200: {
         slidesPerView: 4,
@@ -98,7 +98,7 @@ export const initSwiper = function () {
       },
       768: {
         slidesPerView: 1.25,
-        spaceBetween: 18,
+        spaceBetween: 30,
       },
       1200: {
         slidesPerView: 1.5,

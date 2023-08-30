@@ -12,15 +12,16 @@
   z-index: 1;
 
   @include vp-1199 {
-    top: 367px;
+    top: 333px;
     left: 50%;
     transform: translateX(-50%);
+    width: 442px;
+    height: 300px;
   }
 }
 
 .video__image {
   position: relative;
-  width: 100%;
 }
 
 .video__image img {
@@ -70,11 +71,12 @@
 .video__button:hover,
 .video__button:focus {
   background-color: $color-transparent;
-  stroke: $color-resolution-blue;
+  border-color: $color-resolution-blue;
 }
 
 .video__button:active {
   background-color: $color-resolution-blue;
+  border-color: $color-resolution-blue;
 }
 
 .video__button:disabled {

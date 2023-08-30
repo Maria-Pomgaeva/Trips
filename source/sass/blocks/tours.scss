@@ -3,18 +3,23 @@
   padding: 124px 0 0;
 
   @include vp-1199 {
-    padding-top: 70px;
+    padding-top: 88px;
   }
 
   @include vp-767 {
-    padding-top: 50px;
+    padding-top: 69px;
   }
 
   & h2 {
     margin: 0 0 -35px;
 
+    @include vp-1199 {
+      margin-bottom: -30px;
+    }
+
     @include vp-767 {
       max-width: 156px;
+      margin-bottom: -42px;
     }
   }
 }
@@ -64,10 +69,23 @@
 
 .tours__wrapper {
   padding-top: 89px;
+
+  @include vp-1199 {
+    padding-top: 73px;
+  }
+
+  @include vp-767 {
+    padding-top: 67px;
+  }
 }
 
 .tours__slide {
   position: relative;
+
+  @include vp-1199 {
+    width: 324px;
+    height: 412px;
+  }
 }
 
 .tours__image {
@@ -87,6 +105,15 @@
 
 .tours__image img {
   width: 100%;
+
+  @include vp-1199 {
+    width: 324px;
+    height: 412px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+  }
 }
 
 .tours__text-container {
@@ -159,7 +186,7 @@
   padding: 9px 0 8px 35px;
 
   @include vp-1199 {
-    padding-left: 25px;
+    padding-left: 24px;
   }
 
   @include vp-767 {
@@ -176,6 +203,10 @@
   &--place {
     background-color: $color-navy-blue;
     padding: 9px 25px 8px 39px;
+
+    @include vp-1199 {
+      padding-right: 16px;
+    }
 
     @include vp-767 {
       grid-row: 2 / 3;
@@ -276,7 +307,7 @@
     line-height: 14px;
     letter-spacing: 0.56px;
 
-    margin-top: 29px;
+    margin-top: 31px;
   }
 }
 
