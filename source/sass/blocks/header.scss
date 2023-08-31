@@ -37,7 +37,8 @@
   z-index: 4;
 
   @include vp-1199 {
-    margin-right: 21%;
+    margin-right: auto;
+    margin-left: 39.5%;
   }
 
   @include vp-767 {

@@ -16,6 +16,7 @@
 
   @include vp-1199 {
     flex-direction: column;
+    align-items: center;
     gap: 40px;
   }
 
@@ -56,7 +57,7 @@
       line-height: 20px;
 
       margin-bottom: 30px;
-      max-width: 290px;
+      min-width: 290px;
     }
   }
 }
@@ -132,9 +133,16 @@
   }
 }
 
+.contacts__wrapper a:hover,
 .contacts__wrapper a:focus {
   outline: none;
   color: $color-resolution-blue;
+  text-decoration-line: underline;
+}
+
+.contacts__wrapper a:active {
+  outline: none;
+  color: $color-navy-blue;
 }
 
 .contacts__wrapper svg {
