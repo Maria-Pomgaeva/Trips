@@ -84,7 +84,7 @@
   }
 
   @include vp-767 {
-    padding-top: 61px;
+    padding-top: 32px;
   }
 }
 
@@ -116,12 +116,15 @@
     margin: 0;
 
     @include vp-1199 {
+      font-size: 12px;
       line-height: 18px;
 
       margin: 0;
     }
 
     @include vp-767 {
+      font-size: 12px;
+      line-height: 18px;
       margin: 0;
     }
   }
@@ -203,7 +206,7 @@
   }
 
   @include vp-767 {
-    margin-top: 4px;
+    margin-top: 0;
   }
 
   & h3 {
