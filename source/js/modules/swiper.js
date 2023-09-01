@@ -37,6 +37,11 @@ export const initSwiper = function () {
     slideVisibleClass: 'tours__slide--visible',
     simulateTouch: false,
 
+    lazy: {
+      loadOnTransitionStart: false,
+      loadPrevNext: false,
+    },
+
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -61,6 +66,11 @@ export const initSwiper = function () {
     watchSlidesProgress: true,
     slideVisibleClass: 'training__slide--visible',
     simulateTouch: false,
+
+    lazy: {
+      loadOnTransitionStart: false,
+      loadPrevNext: false,
+    },
 
     breakpoints: {
       320: {

@@ -64,5 +64,15 @@ export class Burger {
     if (evt.target.hasAttribute('data-close-menu')) {
       this._closeMenu();
     }
+    if (evt.target.closest('[data-menu-link]')) {
+      let link = evt.target.closest('[data-menu-link]');
+      evt.preventDefault();
+      let id = link.getAttribute('href');
+      this._closeMenu();
+      document.querySelector(id).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   }
 }

@@ -50,8 +50,11 @@
     left: 55%;
     transform: translateX(-54%);
 
-    @include vp-767 {
+    @include vp-1199 {
       left: 59%;
+    }
+
+    @include vp-767 {
       transform: translateX(-41%);
     }
   }

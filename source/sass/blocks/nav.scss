@@ -1,7 +1,7 @@
 .nav {
   @include vp-1199 {
     position: fixed;
-    top: 134px;
+    top: 105px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -19,7 +19,7 @@
     pointer-events: none;
   }
   @include vp-767 {
-    top: 134px;
+    top: 84px;
   }
 }
 
@@ -28,7 +28,7 @@
     overflow-x: hidden;
     overflow-y: auto;
 
-    background-color: #ffffff;
+    background-color: $color-default-white;
   }
 }
 
@@ -78,16 +78,15 @@
     margin: 0;
     padding: 23px 40px 66px;
 
-    background-color: #ffffff;
+    background-color: $color-default-white;
   }
-  //
+
   @include vp-767 {
     gap: 14px;
     padding: 11px 9px 46px;
   }
 }
 
-// При реализации состояний через border появляется "след" от бордера на ссылках
 .nav__link {
   position: relative;
   z-index: 20;
@@ -96,17 +95,17 @@
 
   font-size: 16px;
   line-height: 16px;
-  color: #ffffff;
+  color: $color-default-white;
 
   @include vp-1199 {
     font-weight: 700;
     font-size: 16px;
     line-height: 16px;
-    color: #2d383f;
+    color: $color-elephant;
     text-transform: uppercase;
     letter-spacing: 0.64px;
   }
-  //
+
   @include vp-767 {
     font-size: 14px;
     line-height: 14px;
