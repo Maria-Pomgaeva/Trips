@@ -4662,6 +4662,7 @@ button,
   }
 
   .training__slide p {
+    font-size: 12px;
     line-height: 18px;
     margin: 0;
   }
@@ -5204,7 +5205,7 @@ button,
   }
 
   .training__wrapper {
-    padding-top: 61px;
+    padding-top: 32px;
   }
 
   .training__slide {
@@ -5213,6 +5214,8 @@ button,
   }
 
   .training__slide p {
+    font-size: 12px;
+    line-height: 18px;
     margin: 0;
   }
 
@@ -5221,7 +5224,7 @@ button,
   }
 
   .training__process {
-    margin-top: 4px;
+    margin-top: 0;
   }
 
   .training__process h3 {
