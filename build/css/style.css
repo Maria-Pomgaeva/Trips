@@ -4663,6 +4663,7 @@ button,
 
   .training__slide p {
     line-height: 18px;
+    margin: 0;
   }
 
   .training__process {
@@ -5203,7 +5204,7 @@ button,
   }
 
   .training__wrapper {
-    padding-top: 72px;
+    padding-top: 61px;
   }
 
   .training__slide {
@@ -5211,12 +5212,16 @@ button,
     min-height: 385px;
   }
 
+  .training__slide p {
+    margin: 0;
+  }
+
   .training__link {
     right: 11px;
   }
 
   .training__process {
-    margin-top: 38px;
+    margin-top: 4px;
   }
 
   .training__process h3 {
