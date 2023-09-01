@@ -1,16 +1,24 @@
-let navHeader = document.querySelector('.header');
-let navToggle = document.querySelector('.header__toggle');
+import {Burger} from './burger';
 
-export const menuOpen = () => {
-  navHeader.classList.remove('header--nojs');
+const header = document.querySelector('[data-header]');
+const overlay = document.querySelector('[data-overlay]');
+const burger = new Burger();
 
-  navToggle.addEventListener('click', function () {
-    if (navHeader.classList.contains('header--closed')) {
-      navHeader.classList.remove('header--closed');
-      navHeader.classList.add('header--opened');
-    } else {
-      navHeader.classList.add('header--closed');
-      navHeader.classList.remove('header--opened');
-    }
-  });
+const onOverlayClose = (evt) => {
+  evt.preventDefault();
+
+  let target = evt.target;
+  if (target === overlay) {
+    burger._closeMenu();
+  }
+};
+
+export const menuOpen = function () {
+  if (!header) {
+    return;
+  }
+
+  burger.init();
+
+  overlay.addEventListener('click', onOverlayClose);
 };

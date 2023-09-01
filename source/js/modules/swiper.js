@@ -1,7 +1,16 @@
 
 export const initSwiper = function () {
 // eslint-disable-next-line
-  const promoImage = new Swiper ('.promo__container-image', {
+  const promoImage = new Swiper ('.promo__swiper-image', {
+
+    watchSlidesProgress: true,
+    slideVisibleClass: 'promo__slide--visible',
+    loop: true,
+    slidesPerView: 1,
+    simulateTouch: false,
+  });
+  // eslint-disable-next-line
+  const promoContent = new Swiper ('.promo__swiper-content', {
     pagination: {
       el: '.promo__pagination',
       clickable: true,
@@ -13,16 +22,10 @@ export const initSwiper = function () {
     slidesPerView: 1,
     simulateTouch: false,
   });
-  // eslint-disable-next-line
-  const promoContent = new Swiper ('.promo__container-content', {
-    slideVisibleClass: 'promo__slide--visible',
-    loop: true,
-    slidesPerView: 1,
-    simulateTouch: false,
-  });
 
   promoImage.controller.control = promoContent;
   promoContent.controller.control = promoImage;
+
   // eslint-disable-next-line
   const swiperTours = new Swiper ('.tours__swiper', {
     navigation: {
@@ -116,12 +119,14 @@ export const initSwiper = function () {
       },
 
       watchSlidesProgress: true,
-      slideVisibleClass: 'adv__slide--visible',
       simulateTouch: false,
 
-      slidesPerView: 3.5,
+      slidesPerView: 'auto',
+      loop: true,
+      speed: 300,
       spaceBetween: 30,
       centeredSlides: true,
+      allowTouchMove: false,
       initialSlide: 2,
     });
   }
@@ -134,24 +139,9 @@ export const initSwiper = function () {
     },
 
     watchSlidesProgress: true,
-    slideVisibleClass: 'gallery__slide--visible',
+    slidesPerView: 'auto',
+    spaceBetween: 5,
     simulateTouch: false,
-    slidesPerColumn: 2,
     loop: false,
-
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 3,
-      },
-      768: {
-        slidesPerView: 2.75,
-        spaceBetween: 5,
-      },
-      1200: {
-        slidesPerView: 5,
-        spaceBetween: 5,
-      },
-    },
   });
 };

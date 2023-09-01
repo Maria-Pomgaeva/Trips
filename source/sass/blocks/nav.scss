@@ -1,0 +1,158 @@
+.nav {
+  @include vp-1199 {
+    position: fixed;
+    top: 134px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity $trans-default, visibility $trans-default;
+
+    pointer-events: none;
+  }
+  @include vp-767 {
+    top: 134px;
+  }
+}
+
+.nav__inner {
+  @include vp-1199 {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background-color: #ffffff;
+  }
+}
+
+.nav__wrapper {
+  @include vp-1199 {
+    width: 100%;
+    min-height: 100%;
+  }
+}
+
+.nav__overlay {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+
+  @include vp-1199 {
+    z-index: auto;
+
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.nav__menu {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 0;
+  padding: 0;
+
+  list-style: none;
+
+  @include vp-1199 {
+    position: relative;
+    z-index: 100;
+
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin: 0;
+    padding: 23px 40px 66px;
+
+    background-color: #ffffff;
+  }
+  //
+  @include vp-767 {
+    gap: 14px;
+    padding: 11px 9px 46px;
+  }
+}
+
+// При реализации состояний через border появляется "след" от бордера на ссылках
+.nav__link {
+  position: relative;
+  z-index: 20;
+
+  padding: 3px 5px;
+
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+
+  @include vp-1199 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: #2d383f;
+    text-transform: uppercase;
+    letter-spacing: 0.64px;
+  }
+  //
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.56px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  &:not([disabled]),
+  &:not(&--disabled) {
+    &:focus {
+      outline: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+
+        border: 1px solid currentColor;
+
+        inset: 0;
+      }
+    }
+
+    &:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        height: 1px;
+
+        background-color: currentColor;
+      }
+    }
+
+    &:active {
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

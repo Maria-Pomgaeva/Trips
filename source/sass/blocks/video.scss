@@ -6,13 +6,13 @@
 
 .video__container {
   position: absolute;
-  top: 119px;
+  top: 302px;
   right: 0;
 
   z-index: 1;
 
   @include vp-1199 {
-    top: 333px;
+    top: 506px;
     left: 50%;
     transform: translateX(-50%);
     width: 442px;
@@ -59,13 +59,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  display: block;
   width: 56px;
   height: 56px;
   border-radius: 50%;
   border: 1px solid $color-default-white;
   background-color: rgb(255, 255, 255, 0.2);
   cursor: pointer;
-  z-index: 10;
 }
 
 .video__button svg {

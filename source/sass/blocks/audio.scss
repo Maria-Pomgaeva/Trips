@@ -1,10 +1,10 @@
 .audio {
   position: absolute;
-  top: 119px;
+  top: 302px;
   right: 0;
 
   @include vp-1199 {
-    top: 350px;
+    top: 525px;
     left: 50%;
     transform: translateX(-50%);
   }

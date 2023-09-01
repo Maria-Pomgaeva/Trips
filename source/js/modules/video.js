@@ -3,7 +3,8 @@ const link = document.querySelector('.video__button');
 
 export const videoLoad = () => {
   if (link && video) {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (evt) => {
+      evt.preventDefault();
       if (video.classList.contains('active')) {
         return;
       }
