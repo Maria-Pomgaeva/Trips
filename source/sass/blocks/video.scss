@@ -83,9 +83,10 @@
 }
 
 .video__button:hover,
-.video__button:focus {
+.video__button:focus-visible {
   background-color: $color-transparent;
   border-color: $color-resolution-blue;
+  outline: none;
 
   & svg {
     stroke: #1c3374;

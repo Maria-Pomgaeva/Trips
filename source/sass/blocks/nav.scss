@@ -61,10 +61,11 @@
   display: flex;
   gap: 22px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  margin: 20px 0 0;
+  margin: 20px auto 0;
   padding: 0;
+  max-width: 590px;
 
   list-style: none;
 
@@ -77,6 +78,7 @@
     align-items: start;
     margin: 0;
     padding: 23px 40px 66px;
+    max-width: 100%;
 
     background-color: $color-default-white;
   }

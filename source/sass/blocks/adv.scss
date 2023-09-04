@@ -85,6 +85,7 @@
 
 .adv__wrapper {
   padding-bottom: 84px;
+  height: auto;
 
   @include vp-1199 {
     display: flex;
@@ -111,7 +112,7 @@
 
   padding: 40px 10px;
 
-  min-height: 329px;
+  height: auto;
   max-width: 380px;
   border: 1px solid rgba(2, 102, 193, 0.1);
 
@@ -125,7 +126,6 @@
     padding: 30px 20px;
 
     max-width: 324px;
-    min-height: 272px;
     margin-right: 0;
     background-position-y: 27px;
     background-size: 48px 48px;
@@ -135,7 +135,6 @@
     padding: 19px 10px;
 
     max-width: 290px;
-    min-height: 244px;
     background-position-y: 20px;
     background-size: 42px 42px;
   }

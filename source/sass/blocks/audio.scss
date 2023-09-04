@@ -55,6 +55,16 @@
 
   cursor: pointer;
   transform: translate(-50%, -50%);
-  fill: $color-default-white;
-  color: $color-default-white;
+  fill: $color-resolution-blue;
+  color: $color-resolution-blue;
+
+  & svg {
+    stroke: $color-default-white;
+  }
+}
+
+.audio__button:hover svg,
+.audio__button:focus-visible svg {
+  border: 1px solid $color-default-white;
+  border-radius: 50%;
 }

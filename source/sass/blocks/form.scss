@@ -109,7 +109,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
-  color: rgb(45, 56, 63, 0.5);
+  color: $color-elephant;
 
   border: 1px solid rgba(2, 102, 193, 0.1);
   background-color: $color-default-white;
@@ -141,6 +141,31 @@
   &:disabled {
     border-color: rgba(2, 102, 193, 0.1);
   }
+
+  &:not([disabled]),
+  &:not(&--disabled) {
+    @include hover {
+      color: $color-navy-blue;
+
+      border-color: $color-navy-blue;
+
+      &::placeholder {
+        color: $color-navy-blue;
+
+        opacity: 1;
+      }
+    }
+
+    @include focus {
+      border-color: $color-resolution-blue;
+      outline: none;
+
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+
 }
 
 .form__name-label.is-invalid input {

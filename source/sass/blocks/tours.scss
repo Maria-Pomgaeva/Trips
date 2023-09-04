@@ -72,7 +72,6 @@
 
   @include vp-1199 {
     padding-top: 73px;
-    padding-left: 7px;
   }
 
   @include vp-767 {
@@ -85,7 +84,6 @@
   position: relative;
 
   @include vp-1199 {
-    width: 324px;
     height: 412px;
   }
 }
@@ -128,16 +126,15 @@
 
 .tours__text-container {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 0 20px 28px;
+  display: flex;
+  flex-direction: column;
+
+  padding: 50% 20px 28px;
+  inset: 0;
 
   z-index: 2;
   color: $color-default-white;
-
-  @include vp-767 {
-    margin-bottom: 26px;
-  }
+  overflow: auto;
 
   & h3 {
     position: relative;
@@ -169,13 +166,14 @@
 
 .tours__text-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
 
   padding: 0;
-  margin: 0 0 23px;
+  margin: auto 0 23px;
   list-style: none;
 
   @include vp-1199 {
