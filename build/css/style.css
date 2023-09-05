@@ -2409,6 +2409,15 @@ button,
   -ms-grid-row-align: center;
   align-self: center;
   margin-left: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .header__phone {
@@ -2880,7 +2889,6 @@ button,
 
 .tours__slide {
   position: relative;
-  max-width: 380px;
   height: auto;
   min-height: 413px;
   padding: 36px 20px 25px;
@@ -3287,7 +3295,7 @@ button,
   position: relative;
   padding: 33px 10px 33px 40px;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: left bottom 47px;
   background-size: 24px 24px;
 }
 
@@ -3510,10 +3518,6 @@ button,
   line-height: 22px;
   padding-bottom: 10px;
   margin: 0;
-}
-
-.reviews__text p:last-of-type {
-  padding-bottom: 0;
 }
 
 .reviews__text h3 {
@@ -4236,6 +4240,15 @@ button,
   -ms-grid-row-align: center;
   align-self: center;
   max-width: 145px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .footer__phone {
@@ -4741,6 +4754,7 @@ button,
 
   .training__item {
     padding: 19px 60px 17px 40px;
+    background-position: left center;
   }
 
   .training__item p {
