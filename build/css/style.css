@@ -3396,7 +3396,7 @@ button,
 
 .about {
   position: relative;
-  padding: 96px 0 0;
+  padding: 48px 0 0;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -3404,11 +3404,12 @@ button,
 .about__container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 34px 0 50px;
+  padding: 82px 0 112px;
   z-index: -1;
   background-image: url("../img/image/about/about-photo-desktop.png");
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: left center;
+  background-size: 51%;
 }
 
 .about::after {
@@ -3456,7 +3457,7 @@ button,
 }
 
 .reviews {
-  padding: 73px 0 0;
+  padding: 10px 0 0;
 }
 
 .reviews__container h2 {
@@ -4758,12 +4759,14 @@ button,
   }
 
   .about {
-    padding-top: 40px;
+    padding-top: 52px;
   }
 
   .about__container {
-    background-position: left top 41px;
+    background-position: left center;
+    background-size: 52%;
     background-image: url("../img/image/about/about-photo-tablet.png");
+    padding: 22px 0 2px;
   }
 
   .about::after {
@@ -4785,7 +4788,7 @@ button,
   }
 
   .reviews {
-    padding-top: 40px;
+    padding-top: 89px;
   }
 
   .reviews__wrapper {
@@ -5335,6 +5338,7 @@ button,
 
   .about__container {
     background-position: left 0 top 9px;
+    background-size: auto;
     background-image: url("../img/image/about/about-photo-mobile.png");
   }
 
