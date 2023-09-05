@@ -141,6 +141,15 @@
 
 .header__container-phone {
   align-self: center;
+
+  @include vp-1199 {
+    justify-self: end;
+  }
+
+  @include vp-767 {
+    grid-column: 2/-1;
+    margin-top: -7px;
+  }
 }
 
 .header__phone {
@@ -149,15 +158,11 @@
   line-height: 18px;
   color: $color-default-white;
 
-  margin: 22px 0 0;
-
   justify-self: end;
 
   @include vp-1199 {
     font-size: 16px;
     line-height: 16px;
-
-    margin: 13px 0 0;
   }
 
   @include vp-767 {
@@ -167,7 +172,6 @@
     display: flex;
     grid-column: 2/-1;
     flex-wrap: wrap;
-    margin-top: -7px;
   }
 
 

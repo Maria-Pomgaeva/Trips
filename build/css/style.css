@@ -2415,7 +2415,6 @@ button,
   font-weight: 600;
   line-height: 18px;
   color: #ffffff;
-  margin: 22px 0 0;
   -ms-grid-column-align: end;
   justify-self: end;
 }
@@ -2880,30 +2879,37 @@ button,
 
 .tours__slide {
   position: relative;
+  max-width: 380px;
+  height: auto;
+  min-height: 413px;
+  padding: 36px 20px 25px;
+  overflow: hidden;
+  z-index: 1;
+  color: #ffffff;
 }
 
-.tours__image {
-  position: relative;
-}
-
-.tours__image::before {
+.tours__slide::before {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   content: "";
+  inset: 0;
   z-index: 1;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
 }
 
+.tours__image {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+
 .tours__image img {
   width: 100%;
+  height: 100%;
 }
 
 .tours__text-container {
-  position: absolute;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2911,11 +2917,14 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 50% 20px 28px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 100%;
+  padding-top: 50%;
   inset: 0;
-  z-index: 2;
   color: #ffffff;
-  overflow: auto;
+  z-index: 2;
 }
 
 .tours__text-container h3 {
@@ -3266,6 +3275,9 @@ button,
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -4423,10 +4435,14 @@ button,
     user-select: none;
   }
 
+  .header__container-phone {
+    -ms-grid-column-align: end;
+    justify-self: end;
+  }
+
   .header__phone {
     font-size: 16px;
     line-height: 16px;
-    margin: 13px 0 0;
   }
 
   .header.is-open {
@@ -4523,11 +4539,12 @@ button,
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: start;
+    gap: 18px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: start;
     margin: 0;
-    padding: 23px 40px 66px;
+    padding: 15px 40px 66px;
     max-width: 100%;
     background-color: #ffffff;
   }
@@ -4640,29 +4657,25 @@ button,
     right: 0;
   }
 
+  .tours__swiper {
+    margin: 0 5px;
+  }
+
   .tours__wrapper {
     padding-top: 73px;
   }
 
   .tours__slide {
-    height: 412px;
-  }
-
-  .tours__image::before {
-    width: 324px;
-  }
-
-  .tours__image img {
-    width: 324px;
-    height: 412px;
+    min-height: 412px;
+    padding: 63px 20px 14px;
   }
 
   .tours__text-list {
-    gap: 18px;
+    gap: 5px;
   }
 
   .tours__text-item {
-    padding-left: 24px;
+    padding-left: 33px;
   }
 
   .tours__text-item--place {
@@ -5002,7 +5015,7 @@ button,
 
   .footer__list {
     gap: 11px;
-    margin: 6px 0 0 0;
+    margin: 6px 0 0 76px;
     max-width: 485px;
   }
 
@@ -5070,6 +5083,11 @@ button,
     margin: 0;
   }
 
+  .header__container-phone {
+    grid-column: 2/-1;
+    margin-top: -7px;
+  }
+
   .header__phone {
     font-size: 14px;
     line-height: 14px;
@@ -5079,7 +5097,6 @@ button,
     grid-column: 2/-1;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-top: -7px;
   }
 
   .nav {
@@ -5087,8 +5104,8 @@ button,
   }
 
   .nav__menu {
-    gap: 14px;
-    padding: 11px 9px 46px;
+    gap: 12px;
+    padding: 10px 9px 45px;
   }
 
   .nav__link {
@@ -5152,17 +5169,17 @@ button,
     height: 595px;
   }
 
+  .tours__swiper {
+    margin: 0;
+  }
+
   .tours__wrapper {
     padding-top: 67px;
     padding-left: 0;
   }
 
-  .tours__image::before {
-    width: 290px;
-  }
-
-  .tours__image img {
-    width: 290px;
+  .tours__slide {
+    padding: 68px 20px 26px;
   }
 
   .tours__text-container h3 {
@@ -5586,6 +5603,7 @@ button,
     -moz-columns: auto 2;
     columns: auto 2;
     gap: 54px;
+    margin: 8px 0 0;
     max-width: 257px;
   }
 
@@ -5597,7 +5615,7 @@ button,
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 5px;
   }
 }

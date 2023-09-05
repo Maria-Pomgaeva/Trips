@@ -234,6 +234,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+  align-items: end;
 
   list-style: none;
   margin: 0;
