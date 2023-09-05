@@ -2408,6 +2408,7 @@ button,
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+  margin-left: 6px;
 }
 
 .header__phone {
@@ -4591,7 +4592,7 @@ button,
   }
 
   .promo__button {
-    width: 62%;
+    width: 30.5%;
     margin: 0 auto;
   }
 
@@ -5138,7 +5139,7 @@ button,
   }
 
   .promo__button {
-    width: 31%;
+    width: 62%;
     padding: 18px 0;
   }
 
@@ -5345,7 +5346,7 @@ button,
   .about__text-container {
     width: 100%;
     margin: 0;
-    padding-top: 423px;
+    padding-top: 435px;
     padding-left: 0;
   }
 
@@ -5365,7 +5366,7 @@ button,
   }
 
   .reviews {
-    padding-top: 21px;
+    padding-top: 68px;
   }
 
   .reviews__container h2 {
@@ -5446,7 +5447,7 @@ button,
   }
 
   .gallery {
-    padding-top: 68px;
+    padding-top: 71px;
   }
 
   .gallery__container h2 {

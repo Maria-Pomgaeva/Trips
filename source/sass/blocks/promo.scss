@@ -144,12 +144,12 @@
   padding: 21px 0;
 
   @include vp-1199 {
-    width: 62%;
+    width: 30.5%;
     margin: 0 auto;
   }
 
   @include vp-767 {
-    width: 31%;
+    width: 62%;
     padding: 18px 0;
   }
 }

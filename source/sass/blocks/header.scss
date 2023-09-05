@@ -141,6 +141,7 @@
 
 .header__container-phone {
   align-self: center;
+  margin-left: 6px;
 
   @include vp-1199 {
     justify-self: end;
