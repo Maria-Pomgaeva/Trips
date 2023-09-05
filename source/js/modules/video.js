@@ -10,7 +10,7 @@ export const videoLoad = () => {
       }
       let src = video.dataset.src;
       video.classList.add('active');
-      video.insertAdjacentHTML('afterbegin', '<iframe src="' + src + '" title="YouTube video player" frameborder="0" allowfullscreen="1" allow="accelerometer; encrypted-media; gyroscope; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share></iframe>');
+      video.insertAdjacentHTML('afterbegin', '<iframe src="' + src + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="1"></iframe>');
     });
   }
 };
