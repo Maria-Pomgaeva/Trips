@@ -52,7 +52,7 @@
         </div>
       </header>
       <main>
-        <section class="promo">
+        <section class="promo" data-slider-full>
           <div class="promo__container-image">
             <div class="promo__swiper-image swiper">
               <div class="promo__wrapper-image swiper-wrapper">
@@ -123,7 +123,8 @@
                               </svg>
                             </a>
                           </div>
-                          <div class="video__player" id="player" data-src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1"></div>
+                          <div class="video__player" id="player" data-video="9TZXsZItgdw"></div>
+                          <!-- data-src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1" -->
                         </div>
                       </div>
                     </div>
@@ -197,7 +198,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="promo__pagination swiper-pagination"></div>
+                <div class="promo__pagination swiper-pagination">
+                  <button class="promo__pagination-bullet" type="button" tabindex="0" aria-current="true"></button>
+                  <button class="promo__pagination-bullet" type="button" tabindex="0" aria-current="true"></button>
+                  <button class="promo__pagination-bullet" type="button" tabindex="0" aria-current="true"></button>
+                </div>
               </div>
             </div>
           </div>

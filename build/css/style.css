@@ -2548,6 +2548,10 @@ button,
   visibility: visible;
 }
 
+.swiper-slide:not(.swiper-slide-active).video__player {
+  display: none;
+}
+
 .promo__slide-image img {
   width: 100%;
   height: 100%;

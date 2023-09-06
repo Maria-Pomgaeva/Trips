@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initPhoneMask} from './utils/phone-mask/phone-mask';
 import {Form} from './modules/form-validate/form';
 import {menuOpen} from './modules/menu-open';
-import {videoLoad} from './modules/video';
+import {initPromoSlider} from './modules/video-swiper';
 import {audioLoad} from './modules/audio';
 import {initSwiper} from './modules/swiper';
 import {initMap} from './modules/map';
@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initPhoneMask();
     menuOpen();
-    videoLoad();
+    initPromoSlider();
     audioLoad();
     initSwiper();
     initMap();
