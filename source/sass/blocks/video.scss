@@ -45,12 +45,8 @@
   height: 100%;
 }
 
-.video__player.active {
+.video.is-show .video__player {
   display: block;
-}
-
-.video__player.active .video__button {
-  display: none;
 }
 
 .video__button {

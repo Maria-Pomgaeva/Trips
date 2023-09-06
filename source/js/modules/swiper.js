@@ -1,31 +1,5 @@
 
 export const initSwiper = function () {
-// eslint-disable-next-line
-  const promoImage = new Swiper ('.promo__swiper-image', {
-
-    watchSlidesProgress: true,
-    slideVisibleClass: 'promo__slide--visible',
-    loop: true,
-    slidesPerView: 1,
-    simulateTouch: false,
-  });
-  // eslint-disable-next-line
-  const promoContent = new Swiper ('.promo__swiper-content', {
-    pagination: {
-      el: '.promo__pagination',
-      clickable: true,
-    },
-
-    watchSlidesProgress: true,
-    slideVisibleClass: 'promo__slide--visible',
-    loop: true,
-    slidesPerView: 1,
-    simulateTouch: false,
-  });
-
-  promoImage.controller.control = promoContent;
-  promoContent.controller.control = promoImage;
-
   // eslint-disable-next-line
   const swiperTours = new Swiper ('.tours__swiper', {
     navigation: {

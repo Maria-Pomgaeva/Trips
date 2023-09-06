@@ -46,51 +46,30 @@ export const initPromoSlider = function () {
     }
   });
 
-  // Слайдер
-  // const setTabIndex = () => {
-  //   const swiperWrapper = promoSlider.querySelector('.swiper-wrapper');
-  //   const allBtns = swiperWrapper.querySelectorAll('button, a, iframe');
-
-  //   allBtns.forEach((btn) => {
-  //     if (btn.closest('.swiper-slide-active')) {
-  //       btn.setAttribute('tabindex', '0');
-  //     } else {
-  //       btn.setAttribute('tabindex', '-1');
-  //     }
-  //   });
-  // };
-
   // eslint-disable-next-line
-  const swiperPromoSlider = new Swiper(promoSlider, {
-    autoHeight: true,
-    speed: 300,
-    loop: false,
-    watchSlidesProgress: true,
-    // slideVisibleClass: 'fullscreen__swiper-slide--active',
+  const promoImage = new Swiper('.promo__swiper-image', {
 
+    watchSlidesProgress: true,
+    slideVisibleClass: 'promo__slide--visible',
+    loop: true,
+    slidesPerView: 1,
+    simulateTouch: false,
+  });
+  // eslint-disable-next-line
+  const promoContent = new Swiper('.promo__swiper-content', {
     pagination: {
       el: '.promo__pagination',
-      bulletActiveClass: 'is-active',
-      bulletClass: 'promo__pagination-bullet',
-      renderBullet(index, className) {
-        return '<button class="' + className + '" type="button"></button>';
-      },
       clickable: true,
     },
 
-    on: {
-      // slideChangeTransitionEnd: () => {
-      //   setTabIndex();
-      // },
-      slideChange() {
-        let slide = promo.querySelector('.swiper-slide-visible');
-        let slideData = slide.dataset.slide;
-        if (slideData) {
-          promo.dataset.slide = slideData;
-        } else {
-          promo.dataset.slide = '';
-        }
+    watchSlidesProgress: true,
+    slideVisibleClass: 'promo__slide--visible',
+    loop: true,
+    slidesPerView: 1,
+    simulateTouch: false,
 
+    on: {
+      slideChange() {
         players.forEach((item) => {
           if (item.playerInfo.playerState === YT.PlayerState.PLAYING) {
             item.pauseVideo();
@@ -101,5 +80,7 @@ export const initPromoSlider = function () {
     },
   });
 
-  // setTabIndex();
+
+  promoImage.controller.control = promoContent;
+  promoContent.controller.control = promoImage;
 };
